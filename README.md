@@ -6,4 +6,4 @@
 
 ![Luminex Cover Image](assets/cover-hd.png)
 
-![Luminex Cover Image](assets/heading.png)
+![Luminex Cover Image](assets/headings.png)
