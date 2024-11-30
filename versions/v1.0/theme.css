@@ -83,7 +83,6 @@ body {
     --checkbox-color: var(--theme-color);
     --checkbox-color-hover: var(--accent-brighter-30);
     --checkbox-border-color: var(--accent-brighter-30);
-    --checklist-done-color: var(--accent-opacity-60);
     --checkbox-border-color-hover: var(--theme-color);
 
     --table-border-color: var(--theme-color);
@@ -452,7 +451,7 @@ em {
   font-weight: bold;
   border-bottom: 2px solid var(--theme-color);
   border-top: 2px solid var(--theme-color);
-  background: var(--accent-opacity-10);
+  background: var(--accent-opacity-5);
 }
 
 .vertical-tab-header-group-title:hover{
@@ -566,8 +565,8 @@ button.mod-cta{
 }
 
 .tree-item-self.nav-file-title.tappable.is-clickable.is-active{
-  color: var(--accent-brighter-50);
-  outline: 2px solid var(--accent-opacity-50);
+  color: var(--accent-brighter-30);
+  outline: 2px solid var(--accent-opacity-60);
   background-color: var(--accent-opacity-10);
 }
 
@@ -1129,6 +1128,9 @@ pre[class$='python']:before {
   padding: var(--callout-padding);
 }
 
+/* ╔═══════════════════════════╗ */
+/* ║      Custom Callout       ║ */
+/* ╚═══════════════════════════╝ */
 .callout[data-callout="success"] {
   --callout-color: var(--callout-color-green);
   --callout-icon: lucide-trophy;
