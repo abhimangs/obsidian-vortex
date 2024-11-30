@@ -5,3 +5,5 @@
 <br>
 
 ![Luminex Cover Image](assets/cover-hd.png)
+
+![Luminex Cover Image](assets/heading.png)
