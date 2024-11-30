@@ -1,5 +1,7 @@
-<h1 align="center">Vortex Theme for Obsidian</h1>
-
+<h1 align="center">Vortex</h1>
 <div align="center">
-**v1.0** | Designed with 🎨 by **Abhiman G S**  
+<strong>v1.0</strong> | Designed with ❤️ by <strong>Abhiman G S</strong>
 </div>
+<br>
+
+![Luminex Cover Image](assets/cover-hd.png)
