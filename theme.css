@@ -83,7 +83,6 @@ body {
     --checkbox-color: var(--theme-color);
     --checkbox-color-hover: var(--accent-brighter-30);
     --checkbox-border-color: var(--accent-brighter-30);
-    --checklist-done-color: var(--accent-opacity-60);
     --checkbox-border-color-hover: var(--theme-color);
 
     --table-border-color: var(--theme-color);
@@ -452,7 +451,7 @@ em {
   font-weight: bold;
   border-bottom: 2px solid var(--theme-color);
   border-top: 2px solid var(--theme-color);
-  background: var(--accent-opacity-10);
+  background: var(--accent-opacity-5);
 }
 
 .vertical-tab-header-group-title:hover{
@@ -566,8 +565,8 @@ button.mod-cta{
 }
 
 .tree-item-self.nav-file-title.tappable.is-clickable.is-active{
-  color: var(--accent-brighter-50);
-  outline: 2px solid var(--accent-opacity-50);
+  color: var(--accent-brighter-30);
+  outline: 2px solid var(--accent-opacity-60);
   background-color: var(--accent-opacity-10);
 }
 
@@ -1129,6 +1128,9 @@ pre[class$='python']:before {
   padding: var(--callout-padding);
 }
 
+/* ╔═══════════════════════════╗ */
+/* ║      Custom Callout       ║ */
+/* ╚═══════════════════════════╝ */
 .callout[data-callout="success"] {
   --callout-color: var(--callout-color-green);
   --callout-icon: lucide-trophy;
@@ -1216,6 +1218,41 @@ pre[class$='python']:before {
 .callout[data-callout="team"] {
   --callout-color: var(--callout-color-orange);
   --callout-icon: lucide-users;
+}
+
+/* ╔═══════════════════════════╗ */
+/* ║         Checkbox          ║ */
+/* ╚═══════════════════════════╝ */
+input[data-task='/']:checked,
+li[data-task='/'] > input:checked,
+li[data-task='/'] > p > input:checked {
+  background-image: none;
+  background-color: transparent;
+  position: relative;
+  overflow: hidden;
+}
+input[data-task='/']:checked:after,
+li[data-task='/'] > input:checked:after,
+li[data-task='/'] > p > input:checked:after {
+  top: 0;
+  left: 0;
+  content: ' ';
+  display: block;
+  position: absolute;
+  background-color: var(--theme-color);
+  width: calc(50% - 0.5px);
+  height: 100%;
+  -webkit-mask-image: none;
+}
+
+.markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="x"], .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="X"] {
+  text-decoration: none !important;
+  color: var(--accent-opacity-50);
+}
+
+.markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="/"], .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="X"] {
+  text-decoration: none !important;
+  color: var(--theme-color);
 }
 
 /* +-------------------------------------------------+ */
