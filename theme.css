@@ -37,11 +37,11 @@ body {
 
   /* Heading Color Styling */
   --text-title-h1: #00e5ff;
-  --text-title-h2: #76ff03;
-  --text-title-h3: #ff5722;
-  --text-title-h4: #ffca28;
-  --text-title-h5: #d500f9;
-  --text-title-h6: #e91e63;
+  --text-title-h2: #ffca28;
+  --text-title-h3: #ff5d68;
+  --text-title-h4: #d500f9;
+  --text-title-h5: #2ECC71;
+  --text-title-h6: #db3eb1;
 
   --accent-opacity-5: color-mix(in srgb, var(--theme-color) 5%, transparent);
   --accent-opacity-10: color-mix(in srgb, var(--theme-color) 10%, transparent);
