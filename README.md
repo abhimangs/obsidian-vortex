@@ -1,2 +1,5 @@
-# obsidian-vortex
-A custom Obsidian theme called "Vortex," designed with sleek aesthetics and modern styling for enhanced note-taking. Supports both light and dark modes.
+<h1 align="center">Vortex Theme for Obsidian</h1>
+
+<div align="center">
+**v1.0** | Designed with 🎨 by **Abhiman G S**  
+</div>
