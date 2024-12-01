@@ -4,8 +4,10 @@
 </div>
 <br>
 
-![Luminex Cover Image](assets/cover-hd.png)
+![Vortex Cover Image](assets/cover-hd.png)
 
-![Luminex Cover Image](assets/headings.png)
+![Vortex Headings Image](assets/headings.png)
 
-![Luminex Cover Image](assets/callouts.png)
+![Vortex Callouts Image](assets/callouts.png)
+
+![Vortex Links Image](assets/links.png)
