@@ -2,10 +2,11 @@
 <div align="center">
 <strong>v1.0</strong> | Designed with ❤️ by <strong>Abhiman G S</strong>
 </div>
-
 <br>
 
 ![Vortex Cover Image](assets/cover-hd.png)
+
+
 
 
 
