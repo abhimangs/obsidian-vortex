@@ -5,22 +5,41 @@
 
 <br>
 
-<!-- This is a comment
-
 ![Vortex Cover Image](assets/cover-hd.png)
- -->
 
 
 
 
 
 
+---
+<!-- 
+╔═══════════════════════════╗
+║         HEADING           ║
+╚═══════════════════════════╝
+-->
 
- 
+## Heading Styling
+
+Each heading in the theme has unique styles to make them stand out.
+
+### Different Colors
+Each heading level has its own color, making sections easy to tell apart.
+
+### Neon Glow
+Headings have a glowing effect for a vibrant look.
+
+### Gradient Underline
+Each heading has a custom gradient underline for extra style.
+
 ![Vortex Headings Image](assets/headings.png)
 
 ---
-
+<!-- 
+╔═══════════════════════════╗
+║          LINKS            ║
+╚═══════════════════════════╝
+-->
 ## Link Styling and Animation
 
 Internal and external links are styled with distinct colors for easy differentiation. 
@@ -36,7 +55,11 @@ This effect adds interactivity and enhances the visual appeal of your notes.
 ![Vortex Links Image](assets/links.png)
 
 ---
-
+<!-- 
+╔═══════════════════════════╗
+║        CALLOUTS           ║
+╚═══════════════════════════╝
+-->
 ## Custom Callouts Overview
 Below is a list of **custom callouts** with their respective icons. You can use these callouts in your notes for better organization and visual aesthetics.
 #### Example Usage:
@@ -85,8 +108,6 @@ Below is a list of **custom callouts** with their respective icons. You can use 
 -  [LinkedIn](https://www.linkedin.com/in/abhimangs/)
 -  [X / Twitter](https://x.com/abhimangs)  
 - 📧 Email: [theabhimangs@gmail.com](mailto:theabhimangs@gmail.com)
-
----
 
 ### 📜 License
 
