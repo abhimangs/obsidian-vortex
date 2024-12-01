@@ -22,15 +22,13 @@
 
 ## Heading Styling
 
-Each heading in the theme has unique styles to make them stand out.
-
-### Different Colors
+#### Different Colors
 Each heading level has its own color, making sections easy to tell apart.
 
-### Neon Glow
+#### Neon Glow
 Headings have a glowing effect for a vibrant look.
 
-### Gradient Underline
+#### Gradient Underline
 Each heading has a custom gradient underline for extra style.
 
 ![Vortex Headings Image](assets/headings.png)
