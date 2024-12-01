@@ -8,14 +8,30 @@
 <!-- This is a comment
 
 ![Vortex Cover Image](assets/cover-hd.png)
-
-![Vortex Headings Image](assets/headings.png)
  -->
 
 
 
 
 
+
+
+ 
+![Vortex Headings Image](assets/headings.png)
+
+---
+
+## Link Styling and Animation
+
+Internal and external links are styled with distinct colors for easy differentiation. 
+
+- **Internal Links**: Use the theme’s primary color and point to content within the document.
+- **External Links**: Have a unique color for external resources.
+
+### Hover Effect
+- A bottom border appears, rising to fill the background on hover, creating a smooth animation.
+
+This effect adds interactivity and enhances the visual appeal of your notes.
 
 ![Vortex Links Image](assets/links.png)
 
