@@ -4,6 +4,8 @@
 </div>
 <br>
 
+![Vortex Cover Image](assets/colors.png)
+
 ![Vortex Cover Image](assets/cover-hd.png)
 
 
