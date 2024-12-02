@@ -108,7 +108,7 @@ Below is a list of **custom callouts** with their respective icons. You can use 
 | `team`            | 👥 Users               |
 </details>
 
-![Vortex Callouts Image](assets/callouts.png)
+![Vortex Callouts Image](assets/calouts.png)
 
 ---
 ## 🚀 Stay Connected
