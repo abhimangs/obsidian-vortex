@@ -359,7 +359,7 @@ strong {
   -webkit-background-clip: text;
   color: transparent;
   -webkit-text-fill-color: transparent;
-  font-weight: bold;
+  font-weight: bold !important;
 }
 
 strong .math.math-inline .MathJax {
@@ -472,7 +472,9 @@ em {
 }
 
 .vertical-tab-nav-item.is-active{
-  background-color: var(--theme-color) !important;
+  background-color: var(--accent-opacity-10) !important;
+  color: var(--accent-brighter-30) !important;
+  outline: 2px solid var(--theme-color);
 }
 
 .clickable-icon.extra-setting-button,
@@ -510,6 +512,18 @@ button.mod-cta{
   text-shadow: 0 0 0.5em var(--theme-color);
   transition: 100ms;
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* +-------------------------------------------------+ */
 /* |                                                 | */
@@ -782,7 +796,8 @@ button.mod-cta{
   background-size: 5px 2px;
   text-decoration: none;
 }
-.cm-s-obsidian span.cm-hmd-internal-link .cm-underline{
+.cm-s-obsidian span.cm-hmd-internal-link .cm-underline,
+.internal-link{
   font-weight: bold;
 }
 /* Adds a subtle gradient to the underline in editor mode. */
@@ -1123,7 +1138,6 @@ pre[class$='python']:before {
   border-width: var(--callout-border-width);
   border-radius: var(--callout-radius);
   margin: 1em 0;
-  mix-blend-mode: lighten;
   background-color: rgba(var(--callout-color), var(--callout-background-opacity));
   padding: var(--callout-padding);
 }
