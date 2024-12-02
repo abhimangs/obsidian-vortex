@@ -446,12 +446,9 @@ em {
 .vertical-tab-header-group-title{
   text-align: center;
   color: var(--alt-color);
-  font-size: 15px;
+  font-size: var(--font-ui-medium);
   text-decoration: none;
   font-weight: bold;
-  border-bottom: 2px solid var(--theme-color);
-  border-top: 2px solid var(--theme-color);
-  background: var(--accent-opacity-5);
 }
 
 .vertical-tab-header-group-title:hover{
