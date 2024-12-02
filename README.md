@@ -6,16 +6,24 @@
 
 ![Vortex Cover Image](assets/cover-hd.png)
 
+
+
+
+## 🎨 Multiple Theme Colors
+
+Vortex lets you pick any accent color to match your style.  
+
+### How to Change the Accent Color:
+1. Open **Settings** in Obsidian.
+2. Go to **Appearance**.
+3. Find **Accent Color** with a color ring.
+4. Pick your favorite color.
+
+Everything in Obsidian updates to match the color you choose. It's a quick and easy way to personalize your theme.
+
+See the image below for a demo of how it looks!
+
 ![Vortex Cover Image](assets/colors.png)
-
-
-
-
-
-
-
-
-
 
 ---
 <!-- 
