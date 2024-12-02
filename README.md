@@ -4,9 +4,11 @@
 </div>
 <br>
 
+![Vortex Cover Image](assets/cover-hd.png)
+
 ![Vortex Cover Image](assets/colors.png)
 
-![Vortex Cover Image](assets/cover-hd.png)
+
 
 
 
