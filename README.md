@@ -6,6 +6,11 @@
 
 ![Vortex Cover Image](assets/cover-hd.png)
 
+## ✨ Features
+- Infinite accent color customization.
+- Neon glow and gradient underlines for headings.
+- Smooth animations for links.
+- Unique custom callouts with icons.
 <!-- 
 ╔═══════════════════════════╗
 ║         COLOURS           ║
@@ -27,7 +32,6 @@ See the image below for a demo of how it looks!
 
 ![Vortex Cover Image](assets/colors.png)
 
----
 <!-- 
 ╔═══════════════════════════╗
 ║         HEADING           ║
@@ -47,7 +51,6 @@ Each heading has a custom gradient underline for extra style.
 
 ![Vortex Headings Image](assets/headings.png)
 
----
 <!-- 
 ╔═══════════════════════════╗
 ║          LINKS            ║
@@ -67,7 +70,6 @@ This effect adds interactivity and enhances the visual appeal of your notes.
 
 ![Vortex Links Image](assets/links.png)
 
----
 <!-- 
 ╔═══════════════════════════╗
 ║        CALLOUTS           ║
@@ -112,7 +114,16 @@ Below is a list of **custom callouts** with their respective icons. You can use 
 
 ![Vortex Callouts Image](assets/callouts.png)
 
----
+## 🔧 Installation
+
+1. Open **Settings** in Obsidian.
+2. Go to **Appearance**.
+3. Under **Community Themes**, search for "Vortex."
+4. Click **Use** to apply the theme.
+
+## 🐞 Found a Bug?
+If you encounter any issues or have suggestions, please open an issue on the [GitHub repository](https://github.com/abhimangs/obsidian-vortex/issues).
+
 ## 🚀 Stay Connected
 
 ### 💬 **Questions or Feedback?** Reach out via [GitHub Issues](https://github.com/abhimangs/obsidian-vortex/issues).
@@ -126,6 +137,8 @@ Below is a list of **custom callouts** with their respective icons. You can use 
 
 This theme is licensed under the [MIT License](LICENSE). Feel free to use, modify, and distribute it as per the license terms.
 
+## 🙏 Acknowledgments
+Special thanks to the Obsidian community for their support and inspiration.
 ---
 
 <p align="center">
