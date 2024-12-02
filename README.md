@@ -6,9 +6,11 @@
 
 ![Vortex Cover Image](assets/cover-hd.png)
 
-
-
-
+<!-- 
+╔═══════════════════════════╗
+║         COLOURS           ║
+╚═══════════════════════════╝
+-->
 ## 🎨 Multiple Theme Colors
 
 Vortex lets you pick any accent color to match your style.  
