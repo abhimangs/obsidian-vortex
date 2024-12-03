@@ -4,7 +4,7 @@
 </div>
 <br>
 
-![Vortex Cover Image](assets/cover-hd.png)
+![Vortex Cover Image](cover-hd.png)
 
 ## ✨ Features
 - Infinite accent color customization.
@@ -30,7 +30,7 @@ Everything in Obsidian updates to match the color you choose. It's a quick and e
 
 See the image below for a demo of how it looks!
 
-![Vortex Cover Image](assets/colors.png)
+![Vortex Cover Image](colors.png)
 
 <!-- 
 ╔═══════════════════════════╗
@@ -49,7 +49,7 @@ Headings have a glowing effect for a vibrant look.
 #### Gradient Underline
 Each heading has a custom gradient underline for extra style.
 
-![Vortex Headings Image](assets/headings.png)
+![Vortex Headings Image](headings.png)
 
 <!-- 
 ╔═══════════════════════════╗
@@ -68,7 +68,7 @@ Internal and external links are styled with distinct colors for easy differentia
 
 This effect adds interactivity and enhances the visual appeal of your notes.
 
-![Vortex Links Image](assets/links.png)
+![Vortex Links Image](links.png)
 
 <!-- 
 ╔═══════════════════════════╗
@@ -112,7 +112,7 @@ Below is a list of **custom callouts** with their respective icons. You can use 
 | `team`            | 👥 Users               |
 </details>
 
-![Vortex Callouts Image](assets/callouts.png)
+![Vortex Callouts Image](callouts.png)
 
 ## 🔧 Installation
 
