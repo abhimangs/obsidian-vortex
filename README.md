@@ -1,5 +1,4 @@
 <h1 align="center">Vortex</h1>
-this is pre 3
 <div align="center">
 <strong>v1.0</strong> | Designed with ❤️ by <strong>Abhiman G S</strong>
 </div>
