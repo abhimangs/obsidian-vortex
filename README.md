@@ -138,10 +138,10 @@ If you encounter any issues or have suggestions, please open an issue on the [Gi
 
 This theme is licensed under the [MIT License](LICENSE). Feel free to use, modify, and distribute it as per the license terms.
 
-## 🙏 Acknowledgments
-Special thanks to the Obsidian community for their support and inspiration.
+<h2>🙏 Special thanks to the Obsidian community for their support and inspiration.</h2>
+
 ---
 
 <p align="center">
-  Made with ❤️ by <a href="https://github.com/abhimangs">Abhiman G S</a>
+   Made with ❤️ by <a href="https://github.com/abhimangs">Abhiman G S</a>
 </p>
