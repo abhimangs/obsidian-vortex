@@ -86,30 +86,28 @@ Below is a list of **custom callouts** with their respective icons. You can use 
    <summary>Click to view all custom callouts</summary>
    <br>
    
-| **Callout Name** | **Icon**                |
-|-------------------|-------------------------|
-| `success`         | 🏆 Trophy              |
-| `warning`         | 🛑 Octagon Alert       |
-| `error`           | ⚠️ Triangle Alert      |
-| `info`            | ℹ️ Info                |
-| `quote`           | ❝ Quote               |
-| `note`            | 📓 Notebook Pen        |
-| `highlight`       | ✍️ Highlighter        |
-| `idea`            | 💡 Lightbulb           |
-| `task`            | ✅ Circle Check        |
-| `reminder`        | 🔔 Bell Ring           |
-| `analysis`        | 📊 Chart Pie           |
-| `inspiration`     | 🌅 Sunrise             |
-| `faq`             | ❓ Message Circle      |
-| `code`            | 💻 Code                |
-| `goal`            | 🎯 Target              |
-| `celebration`     | 🎉 Party Popper        |
-| `bug`             | 🐞 Bug                 |
-| `gift`            | 🎁 Gift                |
-| `puzzle`          | 🧩 Puzzle              |
-| `bookmark`        | 🔖 Bookmark            |
-| `calendar`        | 📅 Calendar            |
-| `team`            | 👥 Users               |
+- **`success`**: 🏆 Trophy  
+- **`warning`**: 🛑 Octagon Alert  
+- **`error`**: ⚠️ Triangle Alert  
+- **`info`**: ℹ️ Info  
+- **`quote`**: ❝ Quote  
+- **`note`**: 📓 Notebook Pen  
+- **`highlight`**: ✍️ Highlighter  
+- **`idea`**: 💡 Lightbulb  
+- **`task`**: ✅ Circle Check  
+- **`reminder`**: 🔔 Bell Ring  
+- **`analysis`**: 📊 Chart Pie  
+- **`inspiration`**: 🌅 Sunrise  
+- **`faq`**: ❓ Message Circle  
+- **`code`**: 💻 Code  
+- **`goal`**: 🎯 Target  
+- **`celebration`**: 🎉 Party Popper  
+- **`bug`**: 🐞 Bug  
+- **`gift`**: 🎁 Gift  
+- **`puzzle`**: 🧩 Puzzle  
+- **`bookmark`**: 🔖 Bookmark  
+- **`calendar`**: 📅 Calendar  
+- **`team`**: 👥 Users  
 </details>
 
 ![Vortex Callouts Image](assets/callouts.png)
