@@ -58,6 +58,7 @@ body {
   --accent-brighter-30: color-mix(in srgb, var(--theme-color) 70%, #ffffff);
   --accent-brighter-50: color-mix(in srgb, var(--theme-color) 50%, #ffffff);
   --accent-brighter-70: color-mix(in srgb, var(--theme-color) 30%, #ffffff);
+  --accent-brighter-90: color-mix(in srgb, var(--theme-color) 10%, #ffffff);
 
   --accent-darker-10: color-mix(in srgb, var(--theme-color) 90%, #111111);
   --accent-darker-30: color-mix(in srgb, var(--theme-color) 70%, #111111);
@@ -822,7 +823,7 @@ button.mod-cta{
    including animations and transitions. */
 .internal-link,
 .external-link {
-  color: var(--alt-color);
+  color: var(--alt-color) !important;
   background-position: 0 100%;
   background-repeat: repeat-x;
   background-size: 100% 18%;
@@ -858,8 +859,8 @@ button.mod-cta{
 /* Changes background size and color smoothly for internal links on hover. */
 .internal-link:hover,
 .cm-s-obsidian span.cm-hmd-internal-link .cm-underline:hover {
-  -webkit-text-fill-color: #fff;
-  color: #fff;
+  -webkit-text-fill-color: var(--alt-color);
+  color: var(--alt-color);
   animation: hoverFill 0.5s forwards;
   background-size: 4px 50px;
   text-decoration: none !important;
@@ -868,8 +869,8 @@ button.mod-cta{
 /* Changes background size and color smoothly for external links on hover. */
 .cm-s-obsidian span.cm-link:not(.cm-formatting-link) .cm-underline:hover,
 .external-link:hover {
-  -webkit-text-fill-color: #fff;
-  color: #fff;
+  -webkit-text-fill-color: var(--alt-color);
+  color: var(--alt-color);
   animation: hoverFill 0.5s forwards;
   background-size: 4px 50px;
   text-decoration: none !important;
