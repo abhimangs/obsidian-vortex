@@ -511,17 +511,14 @@ button.mod-cta{
   transition: 100ms;
 }
 
-
-
-
-
-
-
-
-
-
-
-
+.community-modal-readme.markdown-rendered h1,
+.community-modal-readme.markdown-rendered h2,
+.community-modal-readme.markdown-rendered h3,
+.community-modal-readme.markdown-rendered h4,
+.community-modal-readme.markdown-rendered h5,
+.community-modal-readme.markdown-rendered h6 {
+  text-shadow: unset;
+}
 
 /* +-------------------------------------------------+ */
 /* |                                                 | */
