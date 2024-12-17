@@ -520,6 +520,16 @@ button.mod-cta{
   text-shadow: unset;
 }
 
+.community-modal-readme.markdown-rendered strong:has(a) {
+  padding: 0;
+  background-image: none;
+  background-clip: unset;
+  -webkit-background-clip: unset;
+  color: var(--alt-color);
+  -webkit-text-fill-color: unset;
+  font-weight: bold !important;
+}
+
 /* +-------------------------------------------------+ */
 /* |                                                 | */
 /* |             LEFT SIDE DOCK STYLING              | */
