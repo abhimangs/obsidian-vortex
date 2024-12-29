@@ -115,6 +115,17 @@ Below is a list of **custom callouts** with their respective icons. You can use 
 
 ![Vortex Callouts Image](assets/callouts.png)
 
+# 🌟 Transform Your Notes with Vortex  
+
+Vortex is a **lightweight theme** designed to make your notes visually stunning and highly customizable.  
+
+### Why Choose Vortex?  
+- **Smooth animations** for interactive links.  
+- **Customizable colors** to match your style.  
+- **Stylish callouts** for better organization.  
+
+Elevate your note-taking experience with Vortex—the perfect blend of functionality and style!  
+
 ![Vortex Callouts Image](assets/laptop-hd.png)
 
 ## 🔧 Installation
