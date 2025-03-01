@@ -126,6 +126,10 @@ Elevate your note-taking experience with Vortex—the perfect blend of functiona
 
 ![Vortex Callouts Image](assets/laptop-hd.png)
 
+## Share Your Vortex Experience
+
+Have you tried Vortex? We'd love to hear your feedback! Please share your experience by filling out our [Feedback Form](https://abhimangs.notion.site/1a9c6fb7beaa80f7ac81d6338ec3aa0d?pvs=105).
+
 ## 🔧 Installation
 
 1. Open **Settings** in Obsidian.
