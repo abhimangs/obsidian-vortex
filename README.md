@@ -1,9 +1,13 @@
 <h1 align="center">Vortex</h1>
+
 <p align="center">
-    <img src="https://img.shields.io/github/v/release/abhimangs/obsidian-vortex">
-    <img src="https://img.shields.io/github/release-date/abhimangs/obsidian-vortex">
-    <img src="https://img.shields.io/github/license/abhimangs/obsidian-vortex">
+  <img src="https://img.shields.io/github/v/release/abhimangs/obsidian-vortex?style=flat">
+  <img src="https://img.shields.io/github/release-date/abhimangs/obsidian-vortex?style=flat">
+  <img src="https://img.shields.io/github/stars/abhimangs/obsidian-vortex?style=flat">
+  <img src="https://img.shields.io/github/last-commit/abhimangs/obsidian-vortex?style=flat">
+  <img src="https://img.shields.io/github/commit-activity/y/abhimangs/obsidian-vortex?style=flat">
 </p>
+
 <div align="center">
 <strong>v1.0.1</strong> | Designed & Coded with ❤️ by <strong>Abhiman G S</strong>
 </div>
