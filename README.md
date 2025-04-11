@@ -135,6 +135,13 @@ Elevate your note-taking experience with Vortex—the perfect blend of functiona
 
 ![Vortex Callouts Image](assets/laptop-hd.png)
 
+## Fuel My Code with a Coffee! ☕
+If you enjoy my projects, a small tip keeps me coding!
+
+<div align="left">
+[![Buy Me a Coffee](https://raw.githubusercontent.com/abhimangs/abhimangs/main/assets/buy.png)](https://abhiman.lemonsqueezy.com/buy/47982b9f-ab2f-49c1-a11d-4dc364d5dfe6?discount=0)
+</div>
+
 ## 🔧 Installation
 
 1. Open **Settings** in Obsidian.
