@@ -135,12 +135,15 @@ Elevate your note-taking experience with Vortex—the perfect blend of functiona
 
 ![Vortex Callouts Image](assets/laptop-hd.png)
 
-## Fuel My Code with a Coffee! ☕
+## ☕ Fuel My Code with a Coffee!
 If you enjoy my projects, a small tip keeps me coding!
 
 <a href="https://abhiman.lemonsqueezy.com/buy/47982b9f-ab2f-49c1-a11d-4dc364d5dfe6?discount=0">
   <img src="assets/buy.png" alt="Buy Now" width="350">
 </a>
+
+## 🎉 Shoutout to Supporters
+Special thanks to [@1amnotmad](https://github.com/1amnotmad) for their generous donation supporting the Obsidian Vortex theme!
 
 ## 🔧 Installation
 
