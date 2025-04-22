@@ -155,22 +155,23 @@ Special thanks to [@1amnotmad](https://github.com/1amnotmad) for their generous 
 ## 🐞 Found a Bug?
 If you encounter any issues or have suggestions, please open an issue on the [GitHub repository](https://github.com/abhimangs/obsidian-vortex/issues).
 
-## 🚀 Stay Connected
+<!-- Contact -->
+## 🌐 Connect with Me
+**Get in Touch:** Drop me a line at **[theabhimangs@gmail.com](mailto:theabhimangs@gmail.com)** for collabs, queries, or a quick hello!
 
-### 💬 **Questions or Feedback?** Reach out via [GitHub Issues](https://github.com/abhimangs/obsidian-vortex/issues).
-###### 🔗 **Connect with me:**  
--  [GitHub](https://github.com/abhimangs)  
--  [LinkedIn](https://www.linkedin.com/in/abhimangs/)
--  [X / Twitter](https://x.com/abhimangs)  
-- 📧 Email: [theabhimangs@gmail.com](mailto:theabhimangs@gmail.com)
+[![Email](https://img.shields.io/badge/Email-0A84FF?style=for-the-badge&logo=thunderbird&logoColor=white)](mailto:theabhimangs@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/abhimangs)
+[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/theabhimangs)
+[![Threads](https://img.shields.io/badge/Threads-000000?style=for-the-badge&logo=threads&logoColor=white)](https://www.threads.net/@theabhimangs)
+[![Bluesky](https://img.shields.io/badge/Bluesky-0285FF?style=for-the-badge&logo=bluesky&logoColor=white)](https://bsky.app/profile/abhimangs.bsky.social)
+[![Reddit](https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white)](https://www.reddit.com/user/abhimangs)
+[![Twitter (X)](https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white)](https://twitter.com/abhimangs)
 
 ### 📜 License
 
 This theme is licensed under the [MIT License](LICENSE). Feel free to use, modify, and distribute it as per the license terms.
 
 <h2>🙏 Special thanks to the Obsidian community for their support and inspiration.</h2>
-
----
 
 <p align="center">
    Made with ❤️ by <a href="https://github.com/abhimangs">Abhiman G S</a>
