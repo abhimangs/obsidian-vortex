@@ -1,13 +1,5 @@
 <h1 align="center">Vortex</h1>
 
-<p align="center">
-  <img src="https://img.shields.io/github/v/release/abhimangs/obsidian-vortex?style=flat">
-  <img src="https://img.shields.io/github/release-date/abhimangs/obsidian-vortex?style=flat">
-  <img src="https://img.shields.io/github/stars/abhimangs/obsidian-vortex?style=flat">
-  <img src="https://img.shields.io/github/last-commit/abhimangs/obsidian-vortex?style=flat">
-  <img src="https://img.shields.io/github/commit-activity/y/abhimangs/obsidian-vortex?style=flat">
-</p>
-
 <div align="center">
 <strong>v1.0.1</strong> | Designed & Coded with ❤️ by <strong>Abhiman G S</strong>
 </div>
@@ -172,6 +164,14 @@ If you encounter any issues or have suggestions, please open an issue on the [Gi
 This theme is licensed under the [MIT License](LICENSE). Feel free to use, modify, and distribute it as per the license terms.
 
 <h2>🙏 Special thanks to the Obsidian community for their support and inspiration.</h2>
+
+<p align="center">
+  <img src="https://img.shields.io/github/v/release/abhimangs/obsidian-vortex?style=flat">
+  <img src="https://img.shields.io/github/release-date/abhimangs/obsidian-vortex?style=flat">
+  <img src="https://img.shields.io/github/stars/abhimangs/obsidian-vortex?style=flat">
+  <img src="https://img.shields.io/github/last-commit/abhimangs/obsidian-vortex?style=flat">
+  <img src="https://img.shields.io/github/commit-activity/y/abhimangs/obsidian-vortex?style=flat">
+</p>
 
 <p align="center">
    Made with ❤️ by <a href="https://github.com/abhimangs">Abhiman G S</a>
