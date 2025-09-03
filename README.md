@@ -7,7 +7,7 @@
 
 ![Vortex Cover Image](assets/cover-hd.png)
 
-<a href="https://abhiman.lemonsqueezy.com/buy/47982b9f-ab2f-49c1-a11d-4dc364d5dfe6?discount=0"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=&button_colour=5F7FFF&font_colour=ffffff&font_family=Poppins&outline_colour=000000&coffee_colour=FFDD00" alt="Buy Me a Coffee Button"></a>
+<a href="https://store.abhiman.io/buy/47982b9f-ab2f-49c1-a11d-4dc364d5dfe6discount=0"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=&button_colour=5F7FFF&font_colour=ffffff&font_family=Poppins&outline_colour=000000&coffee_colour=FFDD00" alt="Buy Me a Coffee Button"></a>
 
 ## ✨ Features
 - Infinite accent color customization.
@@ -132,7 +132,7 @@ Elevate your note-taking experience with Vortex—the perfect blend of functiona
 ## ☕ Fuel My Code with a Coffee!
 If you enjoy my projects, a small tip keeps me coding!
 
-<a href="https://abhiman.lemonsqueezy.com/buy/47982b9f-ab2f-49c1-a11d-4dc364d5dfe6?discount=0">
+<a href="https://store.abhiman.io/buy/47982b9f-ab2f-49c1-a11d-4dc364d5dfe6discount=0">
   <img src="assets/buy.png" alt="Buy Now" width="350">
 </a>
 
