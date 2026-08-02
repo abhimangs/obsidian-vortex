@@ -107,12 +107,12 @@ body {
     --callout-radius: 4px;
     --callout-border-width: 0px;
     --callout-background-opacity: 0.2;
-    --callout-color-green: 50, 200, 100;
-    --callout-color-yellow: 255, 204, 0;
-    --callout-color-red: 255, 80, 80;
-    --callout-color-blue: 50, 150, 255;
-    --callout-color-purple: 150, 100, 250;
-    --callout-color-orange: 255, 150, 50;
+    --callout-color-green: rgb(50, 200, 100);
+    --callout-color-yellow: rgb(255, 204, 0);
+    --callout-color-red: rgb(255, 80, 80);
+    --callout-color-blue: rgb(50, 150, 255);
+    --callout-color-purple: rgb(150, 100, 250);
+    --callout-color-orange: rgb(255, 150, 50);
 }
 
 /* HEADING - GRADIENT UNDERLINE STYLES */
@@ -1111,11 +1111,11 @@ pre[class$='python']:before {
 .callout {
   overflow: hidden;
   border-style: solid;
-  border-color: rgba(var(--callout-color), var(--callout-border-opacity));
+  border-color: color-mix(in srgb, var(--callout-color) calc(var(--callout-border-opacity) * 100%), transparent);
   border-width: var(--callout-border-width);
   border-radius: var(--callout-radius);
   margin: 1em 0;
-  background-color: rgba(var(--callout-color), var(--callout-background-opacity));
+  background-color: color-mix(in srgb, var(--callout-color) calc(var(--callout-background-opacity) * 100%), transparent);
   padding: var(--callout-padding);
 }
 
