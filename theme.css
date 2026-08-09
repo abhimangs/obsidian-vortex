@@ -11,18 +11,26 @@
 .theme-light,
 .theme-dark {
   color-scheme: dark;
-  --color-base-00: #111111;
-  --color-base-05: #0d0b12;
-  --color-base-10: #1a1a1a;
-  --color-base-20: #242129;
-  --color-base-25: #302c36;
-  --color-base-30: #3d3844;
-  --color-base-35: #4c4654;
-  --color-base-40: #615a6b;
-  --color-base-50: #7d7589;
-  --color-base-60: #9b92a5;
-  --color-base-70: #c3bacb;
-  --color-base-100: #ffffff;
+  /* Default accent = Mocha Mauve / Rosé Pine Iris (both land ~H267).
+     Obsidian's Settings > Appearance accent picker overrides these at
+     runtime, so "infinite accent color customization" still works -
+     this just makes the out-of-the-box accent match the theme. */
+  --accent-h: 267;
+  --accent-s: 84%;
+  --accent-l: 81%;
+  /* Catppuccin Mocha neutrals: Crust -> Text */
+  --color-base-00: #11111b;
+  --color-base-05: #181825;
+  --color-base-10: #1e1e2e;
+  --color-base-20: #313244;
+  --color-base-25: #45475a;
+  --color-base-30: #585b70;
+  --color-base-35: #6c7086;
+  --color-base-40: #7f849c;
+  --color-base-50: #9399b2;
+  --color-base-60: #a6adc8;
+  --color-base-70: #bac2de;
+  --color-base-100: #cdd6f4;
   --background-primary: var(--color-base-00);
   --background-primary-alt: var(--color-base-05);
   --background-secondary: var(--color-base-10);
@@ -36,19 +44,19 @@
 body {
 
   --theme-color: var(--color-accent);
-  --sub-accent: #f4569d;
+  --sub-accent: #eb6f92; /* Rosé Pine Love */
   --sub-accent-60: color-mix(in srgb, var(--sub-accent) 60%, transparent);
 
   /* FONTS STYLING */
   --default-font: Rubik, Segoe UI, Roboto, Arial, sans-serif, sans-serif;
 
-  /* Heading Color Styling */
-  --text-title-h1: #00e5ff;
-  --text-title-h2: #ffca28;
-  --text-title-h3: #ff5d68;
-  --text-title-h4: #d500f9;
-  --text-title-h5: #2ECC71;
-  --text-title-h6: #db3eb1;
+  /* Heading Color Styling (Catppuccin Mocha / Rosé Pine mix) */
+  --text-title-h1: #74c7ec; /* Mocha Sapphire */
+  --text-title-h2: #f6c177; /* Rosé Pine Gold */
+  --text-title-h3: #f38ba8; /* Mocha Red */
+  --text-title-h4: #c4a7e7; /* Rosé Pine Iris */
+  --text-title-h5: #a6e3a1; /* Mocha Green */
+  --text-title-h6: #ebbcba; /* Rosé Pine Rose */
 
   --accent-opacity-5: color-mix(in srgb, var(--theme-color) 5%, transparent);
   --accent-opacity-10: color-mix(in srgb, var(--theme-color) 10%, transparent);
@@ -61,27 +69,27 @@ body {
   --accent-opacity-80: color-mix(in srgb, var(--theme-color) 80%, transparent);
   --accent-opacity-90: color-mix(in srgb, var(--theme-color) 90%, transparent);
 
-  --accent-brighter-10: color-mix(in srgb, var(--theme-color) 90%, #ffffff);
-  --accent-brighter-30: color-mix(in srgb, var(--theme-color) 70%, #ffffff);
-  --accent-brighter-50: color-mix(in srgb, var(--theme-color) 50%, #ffffff);
-  --accent-brighter-70: color-mix(in srgb, var(--theme-color) 30%, #ffffff);
-  --accent-brighter-90: color-mix(in srgb, var(--theme-color) 10%, #ffffff);
+  --accent-brighter-10: color-mix(in srgb, var(--theme-color) 90%, var(--color-base-100));
+  --accent-brighter-30: color-mix(in srgb, var(--theme-color) 70%, var(--color-base-100));
+  --accent-brighter-50: color-mix(in srgb, var(--theme-color) 50%, var(--color-base-100));
+  --accent-brighter-70: color-mix(in srgb, var(--theme-color) 30%, var(--color-base-100));
+  --accent-brighter-90: color-mix(in srgb, var(--theme-color) 10%, var(--color-base-100));
 
-  --accent-darker-10: color-mix(in srgb, var(--theme-color) 90%, #111111);
-  --accent-darker-30: color-mix(in srgb, var(--theme-color) 70%, #111111);
-  --accent-darker-50: color-mix(in srgb, var(--theme-color) 50%, #111111); 
-  --accent-darker-70: color-mix(in srgb, var(--theme-color) 30%, #111111); 
-  
-  /* Linear Gradient for the HR */
+  --accent-darker-10: color-mix(in srgb, var(--theme-color) 90%, var(--color-base-00));
+  --accent-darker-30: color-mix(in srgb, var(--theme-color) 70%, var(--color-base-00));
+  --accent-darker-50: color-mix(in srgb, var(--theme-color) 50%, var(--color-base-00));
+  --accent-darker-70: color-mix(in srgb, var(--theme-color) 30%, var(--color-base-00));
+
+  /* Linear Gradient for the HR (Rosé Pine Iris / Mocha Foam-ish Sky) */
   --hr-gradient: linear-gradient( to right,
-    rgba(0, 255, 255, 0) 0%,
-    #9400D3 25%,
-    #1E90FF 50%,
-    #9400D3 75%,
-    rgba(0, 255, 255, 0) 100%
+    rgba(196, 167, 231, 0) 0%,
+    #c4a7e7 25%,
+    #9ccfd8 50%,
+    #c4a7e7 75%,
+    rgba(196, 167, 231, 0) 100%
     );
 
-    --gradient-bold: linear-gradient(135deg, #00eaff, #ff008c);
+    --gradient-bold: linear-gradient(135deg, #cba6f7, #eb6f92);
     --color-hr: var(--theme-color);
     --color-italic: var(--theme-color);
     --list-marker-color: var(--theme-color);
@@ -114,23 +122,23 @@ body {
     --callout-radius: 4px;
     --callout-border-width: 0px;
     --callout-background-opacity: 0.2;
-    --callout-color-green: rgb(50, 200, 100);
-    --callout-color-yellow: rgb(255, 204, 0);
-    --callout-color-red: rgb(255, 80, 80);
-    --callout-color-blue: rgb(50, 150, 255);
-    --callout-color-purple: rgb(150, 100, 250);
-    --callout-color-orange: rgb(255, 150, 50);
+    --callout-color-green: rgb(166, 227, 161);  /* Mocha Green */
+    --callout-color-yellow: rgb(246, 193, 119); /* Rosé Pine Gold */
+    --callout-color-red: rgb(243, 139, 168);    /* Mocha Red */
+    --callout-color-blue: rgb(137, 180, 250);   /* Mocha Blue */
+    --callout-color-purple: rgb(196, 167, 231); /* Rosé Pine Iris */
+    --callout-color-orange: rgb(250, 179, 135); /* Mocha Peach */
 }
 
 /* HEADING - GRADIENT UNDERLINE STYLES */
 .markdown-preview-section,
 .HyperMD-header{
-  --gradient-h1: linear-gradient(to right, #00c8ff, #ff00d0 45%, var(--background-primary) 90%);
-  --gradient-h2: linear-gradient(to right, #f9ff4f, #f35b35 40%, var(--background-primary) 80%);
-  --gradient-h3: linear-gradient(to right, #ff1793, #ca0aff 35%, var(--background-primary) 70%);
-  --gradient-h4: linear-gradient(to right, #9D50BB, #6E48AA 30%, var(--background-primary) 60%);
-  --gradient-h5: linear-gradient(to right, #43E97B, #38F9D7 25%, var(--background-primary) 50%);
-  --gradient-h6: linear-gradient(to right, #fc46c2, #3F5EFB 22%, var(--background-primary) 45%);
+  --gradient-h1: linear-gradient(to right, #74c7ec, #89b4fa 45%, var(--background-primary) 90%); /* Sapphire -> Blue */
+  --gradient-h2: linear-gradient(to right, #f6c177, #fab387 40%, var(--background-primary) 80%); /* Gold -> Peach */
+  --gradient-h3: linear-gradient(to right, #f38ba8, #eb6f92 35%, var(--background-primary) 70%); /* Red -> Love */
+  --gradient-h4: linear-gradient(to right, #c4a7e7, #cba6f7 30%, var(--background-primary) 60%); /* Iris -> Mauve */
+  --gradient-h5: linear-gradient(to right, #a6e3a1, #94e2d5 25%, var(--background-primary) 50%); /* Green -> Teal */
+  --gradient-h6: linear-gradient(to right, #ebbcba, #f5c2e7 22%, var(--background-primary) 45%); /* Rose -> Pink */
 }
 
 /* **************************************************** */
@@ -461,7 +469,6 @@ em {
 
 .vertical-tab-header-group-title:hover{
   color: var(--theme-color);
-  text-shadow: 0 0 0.5em var(--theme-color);
   transition: 200ms;
 }
 
@@ -473,7 +480,6 @@ em {
 .vertical-tab-nav-item:hover{
   background-color: var(--accent-opacity-30);
   color: var(--theme-color);
-  text-shadow: 0 0 0.5em var(--theme-color);
 }
 
 .vertical-tab-nav-item.is-active{
@@ -514,7 +520,6 @@ button.mod-cta{
   outline: 3px solid var(--accent-opacity-80);
   background-color: var(--accent-opacity-10) !important;
   color: var(--theme-color) !important;
-  text-shadow: 0 0 0.5em var(--theme-color);
   transition: 100ms;
 }
 
@@ -569,7 +574,6 @@ button.mod-cta{
 
 .tooltip{
   color: var(--theme-color);
-  text-shadow: 0 0 0.5em var(--accent-opacity-30);
 }
 
 .workspace-drawer-vault-actions .clickable-icon:hover{
@@ -599,7 +603,6 @@ button.mod-cta{
 .nav-file-title:hover,
 .nav-folder-title:hover{
   color: var(--theme-color) !important;
-  text-shadow: 0 0 0.2em var(--theme-color);
   background-color: var(--accent-opacity-20) !important;
 }
 
@@ -681,18 +684,11 @@ button.mod-cta{
   border-radius: 8px;
 }
 
-.workspace-split.mod-vertical.mod-root 
+.workspace-split.mod-vertical.mod-root
 .workspace-tab-header.tappable:hover
 .workspace-tab-header-inner{
   color: var(--theme-color);
-  text-shadow: 0 0 0.5em var(--theme-color);
   background-color: var(--accent-opacity-20);
-}
-
-.workspace-split.mod-vertical.mod-root 
-.workspace-tab-header.tappable.is-active:hover 
-.workspace-tab-header-inner{
-  text-shadow: unset;
 }
 
 /* Add new tab and the right side dock button hover */
@@ -720,13 +716,13 @@ button.mod-cta{
 
 @keyframes pulse {
   0% {
-    background-color: #ff0000;
+    background-color: #f38ba8; /* Mocha Red */
   }
   50% {
-    background-color: #820000;
+    background-color: #7d3a52; /* darkened maroon */
   }
   100% {
-    background-color: #ff0000;
+    background-color: #f38ba8;
   }
 }
 
@@ -1050,7 +1046,6 @@ pre[class*='language-']:before {
   font-style: normal;
   font-weight: 700;
   font-size: 0.6rem;
-  color: #fff;
   position: absolute;
   top: 0.3rem;
   right: 0.3rem;
@@ -1282,5 +1277,4 @@ li[data-task='/'] > p > input:checked:after {
 
 #calendar-container .nav .right-nav .reset-button:hover{
   color: var(--theme-color);
-  text-shadow: 0 0 1em var(--theme-color);
 }
