@@ -1,13 +1,11 @@
 <h1 align="center">Vortex</h1>
 
 <div align="center">
-<strong>v1.0.2</strong> | Designed & Coded with ❤️ by <strong>Abhiman G S</strong>
+<strong>v1.0.5</strong> | Designed & Coded with ❤️ by <strong>Abhiman Sundararajan</strong>
 </div>
 <br>
 
 ![Vortex Cover Image](assets/cover-hd.png)
-
-<a href="https://store.abhiman.io/buy/47982b9f-ab2f-49c1-a11d-4dc364d5dfe6discount=0"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=&button_colour=5F7FFF&font_colour=ffffff&font_family=Poppins&outline_colour=000000&coffee_colour=FFDD00" alt="Buy Me a Coffee Button"></a>
 
 ## ✨ Features
 - Infinite accent color customization.
@@ -129,13 +127,6 @@ Elevate your note-taking experience with Vortex—the perfect blend of functiona
 
 ![Vortex Callouts Image](assets/laptop-hd.png)
 
-## ☕ Fuel My Code with a Coffee!
-If you enjoy my projects, a small tip keeps me coding!
-
-<a href="https://store.abhiman.io/buy/47982b9f-ab2f-49c1-a11d-4dc364d5dfe6discount=0">
-  <img src="assets/buy.png" alt="Buy Now" width="350">
-</a>
-
 ## 🎉 Shoutout to Supporters
 Special thanks to [@1amnotmad](https://github.com/1amnotmad) for their generous donation supporting the Obsidian Vortex theme!
 
@@ -153,6 +144,7 @@ If you encounter any issues or have suggestions, please open an issue on the [Gi
 ## 🌐 Connect with Me
 **Get in Touch:** Drop me a line at **[theabhimangs@gmail.com](mailto:theabhimangs@gmail.com)** for collabs, queries, or a quick hello!
 
+[![Website](https://img.shields.io/badge/abhiman.io-5F7FFF?style=for-the-badge&logo=safari&logoColor=white)](https://abhiman.io)
 [![Email](https://img.shields.io/badge/Email-0A84FF?style=for-the-badge&logo=thunderbird&logoColor=white)](mailto:theabhimangs@gmail.com)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/abhimangs)
 [![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/theabhimangs)
@@ -176,5 +168,5 @@ This theme is licensed under the [MIT License](LICENSE). Feel free to use, modif
 </p>
 
 <p align="center">
-   Made with ❤️ by <a href="https://github.com/abhimangs">Abhiman G S</a>
+   Made with ❤️ by <a href="https://github.com/abhimangs">Abhiman Sundararajan</a> · <a href="https://abhiman.io">abhiman.io</a>
 </p>
