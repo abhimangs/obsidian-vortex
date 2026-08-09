@@ -16,18 +16,20 @@
      runtime, so "infinite accent color customization" still works -
      this just makes the out-of-the-box accent match the theme. */
   --accent-h: 267;
-  --accent-s: 84%;
-  --accent-l: 81%;
-  /* Catppuccin Mocha neutrals: Crust -> Text */
-  --color-base-00: #11111b;
-  --color-base-05: #181825;
-  --color-base-10: #1e1e2e;
-  --color-base-20: #313244;
-  --color-base-25: #45475a;
-  --color-base-30: #585b70;
-  --color-base-35: #6c7086;
-  --color-base-40: #7f849c;
-  --color-base-50: #9399b2;
+  --accent-s: 70%;
+  --accent-l: 68%;
+  /* Catppuccin Mocha neutrals (Crust -> Text), shaded darker: background/
+     surface steps pushed toward black for a deeper base, text/overlay
+     steps left close to Mocha's real values so legibility doesn't suffer. */
+  --color-base-00: #0c0c13;
+  --color-base-05: #12121c;
+  --color-base-10: #181825;
+  --color-base-20: #2a2b3a;
+  --color-base-25: #3e4051;
+  --color-base-30: #515467;
+  --color-base-35: #676a7f;
+  --color-base-40: #7b8097;
+  --color-base-50: #9096ae;
   --color-base-60: #a6adc8;
   --color-base-70: #bac2de;
   --color-base-100: #cdd6f4;
@@ -44,6 +46,14 @@
 body {
 
   --theme-color: var(--color-accent);
+  /* Muted accent for everyday text/UI use (links, tags, italics, table
+     borders, hovers, ...): dials back saturation and lightness so ANY
+     accent color - the default or whatever the user picks in Settings ->
+     Appearance - reads as a soft tint against the dark background instead
+     of a bright pop. Derived straight from --accent-h/-s/-l, so it tracks
+     accent-picker changes automatically. Full-strength --theme-color is
+     reserved for active/selected-state indicators. */
+  --theme-color-mild: hsl(var(--accent-h) calc(var(--accent-s) * 0.55) calc(var(--accent-l) * 0.82));
   --sub-accent: #eb6f92; /* Rosé Pine Love */
   --sub-accent-60: color-mix(in srgb, var(--sub-accent) 60%, transparent);
 
@@ -90,21 +100,21 @@ body {
     );
 
     --gradient-bold: linear-gradient(135deg, #cba6f7, #eb6f92);
-    --color-hr: var(--theme-color);
-    --color-italic: var(--theme-color);
-    --list-marker-color: var(--theme-color);
+    --color-hr: var(--theme-color-mild);
+    --color-italic: var(--theme-color-mild);
+    --list-marker-color: var(--theme-color-mild);
     --list-bullet-radius: 100%;
 
     --checkbox-marker-color: var(--background-primary);
-    --checkbox-color: var(--theme-color);
+    --checkbox-color: var(--theme-color-mild);
     --checkbox-color-hover: var(--accent-brighter-30);
     --checkbox-border-color: var(--accent-brighter-30);
-    --checkbox-border-color-hover: var(--theme-color);
+    --checkbox-border-color-hover: var(--theme-color-mild);
 
-    --table-border-color: var(--theme-color);
+    --table-border-color: var(--theme-color-mild);
     --table-border-width: 1px;
 
-    --tag-color: var(--theme-color);
+    --tag-color: var(--theme-color-mild);
     --tag-color-hover: var(--accent-brighter-30);
     --tag-background: var(--accent-opacity-10);
     --tag-background-hover: var(--accent-opacity-30);
@@ -115,7 +125,7 @@ body {
 
     --background-modifier-border: var(--accent-opacity-5);
 
-    --vault-profile-color-hover: var(--theme-color);
+    --vault-profile-color-hover: var(--theme-color-mild);
 
     --blockquote-border-thickness: unset;
 
@@ -280,13 +290,13 @@ h6 {
   border-image-source: var(--gradient-h6);
 }
 .view-header-icon {
-  color: var(--theme-color);
+  color: var(--theme-color-mild);
 }
 
 /** Adding different # colors **/
 
 .cm-formatting.cm-formatting-header.cm-header {
-  color: var(--theme-color);
+  color: var(--theme-color-mild);
   opacity: 0.45;
 }
 
@@ -384,7 +394,7 @@ strong .math.math-inline .MathJax {
 
 .cm-strong .cm-selection,
 strong::selection {
-  -webkit-text-fill-color: var(--theme-color);
+  -webkit-text-fill-color: var(--theme-color-mild);
 }
 
 /* +-------------------------------------------------+ */
@@ -414,17 +424,17 @@ em {
 /* +-------------------------------------------------+ */
 
 .cm-s-obsidian span.cm-formatting-list {
-  color: var(--theme-color);
+  color: var(--theme-color-mild);
 }
 
 .cm-indent{
-  color: var(--theme-color);
+  color: var(--theme-color-mild);
   opacity: 0.5;
 }
 
 .markdown-source-view.mod-cm6 .cm-indent::before {
   border-width: 2px;
-  border-color: var(--theme-color);
+  border-color: var(--theme-color-mild);
   margin-left: -1px;
 }
 
@@ -468,7 +478,7 @@ em {
 }
 
 .vertical-tab-header-group-title:hover{
-  color: var(--theme-color);
+  color: var(--theme-color-mild);
   transition: 200ms;
 }
 
@@ -479,7 +489,7 @@ em {
 
 .vertical-tab-nav-item:hover{
   background-color: var(--accent-opacity-30);
-  color: var(--theme-color);
+  color: var(--theme-color-mild);
 }
 
 .vertical-tab-nav-item.is-active{
@@ -498,7 +508,7 @@ em {
 .clickable-icon.setting-add-hotkey-button:hover,
 .setting-item-control .clickable-icon:hover{
   opacity: 1;
-  color: var(--theme-color);
+  color: var(--theme-color-mild);
   background-color: var(--accent-opacity-10);
 }
 
@@ -507,7 +517,7 @@ em {
 }
 
 .modal.mod-settings.mod-sidebar-layout .modal-close-button:hover{
-  color: var(--theme-color);
+  color: var(--theme-color-mild);
   background: var(--accent-opacity-10);
 }
 
@@ -519,7 +529,7 @@ button.mod-cta{
 .mod-cta:hover{
   outline: 3px solid var(--accent-opacity-80);
   background-color: var(--accent-opacity-10) !important;
-  color: var(--theme-color) !important;
+  color: var(--theme-color-mild) !important;
   transition: 100ms;
 }
 
@@ -558,26 +568,26 @@ button.mod-cta{
 .workspace-split.mod-horizontal.mod-sidedock.mod-left-split .nav-buttons-container .clickable-icon.nav-action-button:hover,
 .workspace-split.mod-horizontal.mod-sidedock.mod-right-split .nav-buttons-container .clickable-icon.nav-action-button:hover{
   opacity: 1;
-  color: var(--theme-color);
+  color: var(--theme-color-mild);
   background: var(--accent-opacity-10);
 }
 
 .sidebar-toggle-button.mod-left .clickable-icon:hover{
-  color: var(--theme-color);
+  color: var(--theme-color-mild);
   background: var(--accent-opacity-20);}
 
 .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left .clickable-icon{
-  color: var(--theme-color);
+  color: var(--theme-color-mild);
   background: var(--accent-opacity-10);
   outline: 3px solid var(--accent-opacity-60);
 }
 
 .tooltip{
-  color: var(--theme-color);
+  color: var(--theme-color-mild);
 }
 
 .workspace-drawer-vault-actions .clickable-icon:hover{
-  color: var(--theme-color);
+  color: var(--theme-color-mild);
   background: var(--accent-opacity-20);
   transition: 100ms;
 }
@@ -587,7 +597,7 @@ button.mod-cta{
 /* +-----------------------------+ */
 
 .workspace-split.mod-horizontal.mod-sidedock.mod-left-split .tree-item.nav-folder .tree-item-icon.collapse-icon svg{
-  color: var(--theme-color);
+  color: var(--theme-color-mild);
 }
 
 .workspace-split.mod-horizontal.mod-sidedock.mod-left-split .tree-item.nav-folder.is-collapsed .tree-item-icon.collapse-icon svg{
@@ -602,7 +612,7 @@ button.mod-cta{
 
 .nav-file-title:hover,
 .nav-folder-title:hover{
-  color: var(--theme-color) !important;
+  color: var(--theme-color-mild) !important;
   background-color: var(--accent-opacity-20) !important;
 }
 
@@ -648,7 +658,7 @@ button.mod-cta{
 .workspace-tab-header.tappable:hover 
 .workspace-tab-header-inner-icon{
   opacity: 1;
-  color: var(--theme-color);
+  color: var(--theme-color-mild);
 }
 
 .workspace-split.mod-horizontal.mod-sidedock.mod-left-split 
@@ -687,19 +697,19 @@ button.mod-cta{
 .workspace-split.mod-vertical.mod-root
 .workspace-tab-header.tappable:hover
 .workspace-tab-header-inner{
-  color: var(--theme-color);
+  color: var(--theme-color-mild);
   background-color: var(--accent-opacity-20);
 }
 
 /* Add new tab and the right side dock button hover */
 .workspace-tab-header-new-tab .clickable-icon:hover,
 .sidebar-toggle-button.mod-right .clickable-icon:hover{
-  color: var(--theme-color);
+  color: var(--theme-color-mild);
   background-color: var(--accent-opacity-20);
 }
 
 .workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right .clickable-icon{
-  color: var(--theme-color);
+  color: var(--theme-color-mild);
   background: var(--accent-opacity-10);
   outline: 3px solid var(--accent-opacity-50);
 }
@@ -710,7 +720,7 @@ button.mod-cta{
 
 .titlebar-button-container.mod-right .titlebar-button.mod-minimize:hover,
 .titlebar-button-container.mod-right .titlebar-button.mod-maximize:hover{
-  color: var(--theme-color);
+  color: var(--theme-color-mild);
   background-color: var(--accent-opacity-10);
 }
 
@@ -732,7 +742,7 @@ button.mod-cta{
 }
 
 .workspace-tab-header-inner-close-button:hover svg{
-  color: var(--theme-color);
+  color: var(--theme-color-mild);
 }
 
 
@@ -742,7 +752,7 @@ button.mod-cta{
 
 .view-actions button:hover,
 .view-header-left .view-header-nav-buttons button:hover{
-  color: var(--theme-color);
+  color: var(--theme-color-mild);
   background-color: var(--accent-opacity-10);
 }
 
@@ -752,7 +762,7 @@ button.mod-cta{
 .menu-item.tappable:hover,
 .menu-item.tappable:hover .menu-item-icon{
   opacity: 1;
-  color: var(--theme-color);
+  color: var(--theme-color-mild);
 }
 
 /* +-------------------------------------------------+ */
@@ -797,7 +807,7 @@ button.mod-cta{
 /* Ensures consistent color, background, and text-fill for internal links in the editor. */
 .cm-s-obsidian span.cm-link:not(.cm-formatting-link) .cm-underline,
 .cm-s-obsidian span.cm-hmd-internal-link .cm-underline {
-  color: var(--theme-color);
+  color: var(--theme-color-mild);
   -webkit-text-fill-color: var(--alt-color);
   background-position: 0 100%;
   background-repeat: repeat-x;
@@ -819,7 +829,7 @@ button.mod-cta{
 
 /* Dims the color of Markdown formatting characters for links. */
 .cm-s-obsidian span.cm-formatting-link {
-  color: var(--theme-color) !important;
+  color: var(--theme-color-mild) !important;
   opacity: 0.25;
 }
 
@@ -904,14 +914,14 @@ a,
 
 /* Styling for URL text, reducing opacity for a cleaner appearance. */
 .cm-url {
-  color: var(--theme-color) !important;
+  color: var(--theme-color-mild) !important;
   opacity: 0.4;
   font-weight: normal;
 }
 
 /* Adjusts opacity for Markdown formatting used in image links. */
 .cm-formatting-image {
-  color: var(--theme-color) !important;
+  color: var(--theme-color-mild) !important;
   opacity: 0.7;
 }
 
@@ -919,7 +929,7 @@ a,
 a:hover,
 .internal-link:hover {
   text-decoration: none !important;
-  color: var(--theme-color);
+  color: var(--theme-color-mild);
 }
 
 /* +-------------------------------------------------+ */
@@ -929,7 +939,7 @@ a:hover,
 /* +-------------------------------------------------+ */
 
 .metadata-properties-heading:hover .collapse-indicator.collapse-icon svg{
-  color: var(--theme-color);
+  color: var(--theme-color-mild);
 }
 
 .metadata-property-value .clickable-icon{
@@ -938,17 +948,17 @@ a:hover,
 
 .metadata-property-value .clickable-icon:hover{
   opacity: 1;
-  color: var(--theme-color);
+  color: var(--theme-color-mild);
   background-color: var(--accent-opacity-10);
   transition: 100ms;
 }
 
 .metadata-add-button.text-icon-button:hover .text-button-icon{
-  color: var(--theme-color);
+  color: var(--theme-color-mild);
 }
 
 .metadata-add-button.text-icon-button:hover{
-  color: var(--theme-color);
+  color: var(--theme-color-mild);
   background-color: var(--accent-opacity-10);
   outline: 2px solid var(--accent-opacity-40);
 }
@@ -972,7 +982,7 @@ a:hover,
   word-wrap: break-word;
   padding: 0 5px;
   border-radius: 0.3rem; /* Rounded corners */
-  color: var(--theme-color) !important; /* Text color */
+  color: var(--theme-color-mild) !important; /* Text color */
 }
 
 .theme-dark :not(pre) > code[class*='language-'],
@@ -993,7 +1003,7 @@ a:hover,
 /* |                                                 | */
 /* +-------------------------------------------------+ */
 .cm-s-obsidian span.code-block-flair:not(:empty) {
-  color: var(--theme-color);
+  color: var(--theme-color-mild);
   font-weight: 600;
   text-transform: uppercase;
   font-size: 0.6rem;
@@ -1050,7 +1060,7 @@ pre[class*='language-']:before {
   top: 0.3rem;
   right: 0.3rem;
   padding: 0;
-  color: var(--theme-color) !important;
+  color: var(--theme-color-mild) !important;
   content: '';
   text-transform: uppercase;
   background: var(--accent-opacity-5);
@@ -1246,7 +1256,7 @@ li[data-task='/'] > p > input:checked:after {
 
 .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="/"], .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="X"] {
   text-decoration: none !important;
-  color: var(--theme-color);
+  color: var(--theme-color-mild);
 }
 
 /* +-------------------------------------------------+ */
@@ -1265,16 +1275,16 @@ li[data-task='/'] > p > input:checked:after {
 }
 
 #calendar-container .nav .title .year{
-  color: var(--theme-color);
+  color: var(--theme-color-mild);
 }
 #calendar-container .nav .title .month{
   color: var(--alt-color);
 }
 
 #calendar-container .nav .right-nav .arrow:hover svg{
-  color: var(--theme-color);
+  color: var(--theme-color-mild);
 }
 
 #calendar-container .nav .right-nav .reset-button:hover{
-  color: var(--theme-color);
+  color: var(--theme-color-mild);
 }
