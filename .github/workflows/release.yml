@@ -4,6 +4,12 @@ on:
   push:
     tags:
       - "*"
+    branches:
+      - main
+    paths:
+      - manifest.json
+      - .github/workflows/release.yml
+  workflow_dispatch:
 
 jobs:
   release:
@@ -13,18 +19,28 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Check tag matches manifest version
-        run: |
-          tag="${GITHUB_REF#refs/tags/}"
-          version="$(jq -r .version manifest.json)"
-          if [ "$tag" != "$version" ]; then
-            echo "::error::Tag '$tag' does not match manifest.json version '$version' (tags must not have a 'v' prefix)"
-            exit 1
-          fi
-
-      - name: Create release
+      - name: Determine version
+        id: version
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          tag="${GITHUB_REF#refs/tags/}"
-          gh release create "$tag" --title="$tag" --generate-notes manifest.json theme.css
+          version="$(jq -r .version manifest.json)"
+          if [ "$GITHUB_REF_TYPE" = "tag" ] && [ "$GITHUB_REF_NAME" != "$version" ]; then
+            echo "::error::Tag '$GITHUB_REF_NAME' does not match manifest.json version '$version' (tags must not have a 'v' prefix)"
+            exit 1
+          fi
+          if gh release view "$version" >/dev/null 2>&1; then
+            echo "Release $version already exists, nothing to do"
+            echo "exists=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "exists=false" >> "$GITHUB_OUTPUT"
+          fi
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+
+      - name: Create release
+        if: steps.version.outputs.exists == 'false'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VERSION: ${{ steps.version.outputs.version }}
+        run: |
+          gh release create "$VERSION" --title="$VERSION" --target "$GITHUB_SHA" --generate-notes manifest.json theme.css
