@@ -285,17 +285,26 @@ body {
   --vx-bold-gradient: linear-gradient(120deg, var(--ctp-mauve), var(--rp-love));
   --italic-color: color-mix(in oklch, var(--text-accent) 55%, var(--text-normal));
 
-  /* Links: internal = accent, external = Rosé Pine Foam */
+  /* Links: semibold, one palette hue per kind of link (see section 5).
+     Internal links follow the accent; external links are Rosé Pine Foam. */
+  --link-weight: var(--font-semibold);
   --link-color: var(--text-accent);
   --link-color-hover: var(--text-accent-hover);
   --link-decoration: none;
   --link-decoration-hover: none;
   --link-external-color: var(--rp-foam);
-  --link-external-color-hover: color-mix(in oklch, var(--rp-foam) 70%, var(--text-normal));
+  --link-external-color-hover: color-mix(in oklch, var(--link-external-color) 75%, var(--text-normal));
   --link-external-decoration: none;
   --link-external-decoration-hover: none;
-  --link-unresolved-color: var(--text-accent);
-  --link-unresolved-opacity: 0.6;
+  --link-unresolved-color: var(--ctp-maroon);
+  --link-unresolved-opacity: 0.8;
+  --vx-link-heading: var(--ctp-blue);
+  --vx-link-block: var(--ctp-green);
+  --vx-link-attachment: var(--ctp-peach);
+  --vx-link-mailto: var(--ctp-pink);
+  --vx-link-uri: var(--ctp-yellow);
+  --vx-link-bar-size: 3px;
+  --vx-link-bar-strength: 35%;
 
   /* Icons */
   --icon-color: var(--text-muted);
@@ -497,25 +506,66 @@ body {
   -webkit-text-fill-color: var(--text-normal);
 }
 
-/* Links: a 2px bar under the text that rises to fill the background on
-   hover. --vx-link-bar is set per link type. */
+/* Links: semibold text over a bar that rises to fill the word on hover.
+   Each kind of link gets its own palette hue by overriding --link-color
+   (or --link-external-color) on the link itself; the hover colour and the
+   bar are derived from whichever colour applies. */
 .markdown-rendered .internal-link,
 .markdown-source-view.mod-cm6 .cm-hmd-internal-link .cm-underline {
-  --vx-link-bar: color-mix(in oklch, var(--link-color) 28%, transparent);
+  --link-color-hover: color-mix(in oklch, var(--link-color) 75%, var(--text-normal));
+  --vx-link-bar: color-mix(in oklch, var(--link-color) var(--vx-link-bar-strength), transparent);
 }
 
 .markdown-rendered .external-link,
 .markdown-source-view.mod-cm6 :is(.cm-link, .cm-url) .cm-underline {
-  --vx-link-bar: color-mix(in oklch, var(--link-external-color) 28%, transparent);
+  --link-external-color-hover: color-mix(in oklch, var(--link-external-color) 75%, var(--text-normal));
+  --vx-link-bar: color-mix(in oklch, var(--link-external-color) var(--vx-link-bar-strength), transparent);
+}
+
+.markdown-rendered .internal-link.is-unresolved,
+.markdown-source-view.mod-cm6 .is-unresolved .cm-underline {
+  --vx-link-bar: color-mix(in oklch, var(--link-unresolved-color) calc(var(--vx-link-bar-strength) * 0.6), transparent);
+}
+
+/* Link kinds. Only rendered markdown (reading view, hover previews,
+   canvas) knows a link's target; in the editor, links differ only as
+   resolved, unresolved and external. Order matters: an attachment link
+   with a #page fragment is still an attachment. */
+.markdown-rendered .internal-link[data-href*="#"] {
+  --link-color: var(--vx-link-heading);
+}
+
+.markdown-rendered .internal-link[data-href*="#^"] {
+  --link-color: var(--vx-link-block);
+}
+
+.markdown-rendered .internal-link:is(
+  [data-href$=".pdf" i], [data-href*=".pdf#" i],
+  [data-href$=".png" i], [data-href$=".jpg" i], [data-href$=".jpeg" i], [data-href$=".gif" i],
+  [data-href$=".webp" i], [data-href$=".svg" i], [data-href$=".avif" i], [data-href$=".bmp" i],
+  [data-href$=".mp3" i], [data-href$=".wav" i], [data-href$=".m4a" i], [data-href$=".ogg" i],
+  [data-href$=".flac" i], [data-href$=".mp4" i], [data-href$=".webm" i], [data-href$=".mov" i],
+  [data-href$=".mkv" i]
+) {
+  --link-color: var(--vx-link-attachment);
+}
+
+.markdown-rendered .external-link[href^="mailto:" i] {
+  --link-external-color: var(--vx-link-mailto);
+}
+
+.markdown-rendered .external-link[href^="obsidian:" i] {
+  --link-external-color: var(--vx-link-uri);
 }
 
 .markdown-rendered :is(.internal-link, .external-link),
 .markdown-source-view.mod-cm6 :is(.cm-hmd-internal-link, .cm-link, .cm-url) .cm-underline {
+  font-weight: var(--link-weight);
   -webkit-text-fill-color: currentColor;
   background-image: linear-gradient(var(--vx-link-bar), var(--vx-link-bar));
   background-repeat: no-repeat;
   background-position: 0 100%;
-  background-size: 100% 2px;
+  background-size: 100% var(--vx-link-bar-size);
   padding-inline-end: 0;
   border-radius: 2px;
   transition:
@@ -531,17 +581,13 @@ body {
 /* Reading view keeps Obsidian's external-link icon as a second layer. */
 .markdown-rendered .external-link {
   background-image: linear-gradient(var(--vx-link-bar), var(--vx-link-bar)), url("./public/external-link.svg");
-  background-size: 100% 2px, 0.825em;
+  background-size: 100% var(--vx-link-bar-size), 0.825em;
   background-position: 0 100%, right 0.25em;
   padding-inline-end: 0.9em;
 }
 
 .markdown-rendered .external-link:hover {
   background-size: 100% 100%, 0.825em;
-}
-
-.markdown-rendered .internal-link.is-unresolved {
-  --vx-link-bar: color-mix(in oklch, var(--link-unresolved-color) 18%, transparent);
 }
 
 /* Inline code: Peach on a near-black pill. */
