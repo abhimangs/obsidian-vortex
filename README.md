@@ -1,17 +1,22 @@
 <h1 align="center">Vortex</h1>
 
 <div align="center">
-<strong>v1.0.5</strong> | Designed & Coded with ❤️ by <strong>Abhiman Sundararajan</strong>
+<strong>v2.0.0</strong> | Designed & Coded with ❤️ by <strong>Abhiman Sundararajan</strong>
 </div>
 <br>
 
 ![Vortex Cover Image](assets/cover-hd.png)
 
 ## ✨ Features
+- Pure OLED black: the editor, sidebars, tabs, ribbon and title bar all sit on true `#000`, separated by hairlines instead of grey panels.
+- Every color comes from **Catppuccin Mocha** and **Rosé Pine**, with Catppuccin Mauve as the default accent.
 - Infinite accent color customization.
 - Neon glow and gradient underlines for headings.
-- Smooth animations for links.
+- Gradient bold text and smooth animations for links.
 - Unique custom callouts with icons.
+
+> [!NOTE]
+> Vortex is dark-only: switching Obsidian to light mode keeps the same OLED palette. It uses modern CSS (relative colors and `color-mix()`), so if colors look off, update to the latest Obsidian installer from [obsidian.md](https://obsidian.md/download).
 <!-- 
 ╔═══════════════════════════╗
 ║         COLOURS           ║
@@ -61,8 +66,8 @@ Each heading has a custom gradient underline for extra style.
 
 Internal and external links are styled with distinct colors for easy differentiation. 
 
-- **Internal Links**: Use the theme’s primary color and point to content within the document.
-- **External Links**: Have a unique color for external resources.
+- **Internal Links**: Use the accent color (Catppuccin Mauve by default) and point to content within the vault.
+- **External Links**: Use Rosé Pine Foam and keep Obsidian's external-link icon.
 
 ### Hover Effect
 - A bottom border appears, rising to fill the background on hover, creating a smooth animation.
