@@ -1,0 +1,27 @@
+name: Check theme
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install checker dependencies
+        run: pip install tinycss2==1.4.0 PyYAML==6.0.2
+
+      - name: Check theme.css, manifest and Style Settings
+        run: python .github/scripts/check_theme.py
