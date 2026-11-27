@@ -12,9 +12,211 @@
  *   5. Inline       bold gradient, links, inline code
  *   6. Blocks       horizontal rule, code blocks, callouts, tasks
  *   7. Chrome       the few workspace details variables can't reach
- *   8. Plugins
+ *   8. Toggles      class toggles exposed through the Style Settings plugin
+ *   9. Plugins
+ *
+ *   Style Settings: the @settings block below lets the Style Settings
+ *   community plugin tweak heading, bold, code and link colours and
+ *   turn decorations off.
  *
  * ===================================================================== */
+
+
+/* @settings
+
+name: Vortex
+id: vortex
+settings:
+    -
+        id: vx-about
+        title: "About"
+        description: "Vortex is pure OLED black, coloured with Catppuccin Mocha and Rosé Pine. The accent colour lives in **Settings → Appearance → Accent color**."
+        type: info-text
+        markdown: true
+    -
+        id: vx-headings
+        title: "Headings"
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: h1-color
+        title: "Heading 1 colour"
+        description: "Catppuccin Sapphire by default"
+        type: variable-color
+        format: hex
+        default: '#74c7ec'
+    -
+        id: h2-color
+        title: "Heading 2 colour"
+        description: "Rosé Pine Gold by default"
+        type: variable-color
+        format: hex
+        default: '#f6c177'
+    -
+        id: h3-color
+        title: "Heading 3 colour"
+        description: "Catppuccin Red by default"
+        type: variable-color
+        format: hex
+        default: '#f38ba8'
+    -
+        id: h4-color
+        title: "Heading 4 colour"
+        description: "Rosé Pine Iris by default"
+        type: variable-color
+        format: hex
+        default: '#c4a7e7'
+    -
+        id: h5-color
+        title: "Heading 5 colour"
+        description: "Catppuccin Green by default"
+        type: variable-color
+        format: hex
+        default: '#a6e3a1'
+    -
+        id: h6-color
+        title: "Heading 6 colour"
+        description: "Rosé Pine Rose by default"
+        type: variable-color
+        format: hex
+        default: '#ebbcba'
+    -
+        id: vx-no-heading-glow
+        title: "Turn off the heading glow"
+        type: class-toggle
+    -
+        id: vx-no-heading-rule
+        title: "Turn off the heading underlines"
+        type: class-toggle
+    -
+        id: vx-text
+        title: "Bold and code"
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: vx-plain-bold
+        title: "Solid bold text"
+        description: "Use the start colour below instead of the gradient"
+        type: class-toggle
+    -
+        id: vx-bold-from
+        title: "Bold gradient start"
+        description: "Catppuccin Mauve by default"
+        type: variable-color
+        format: hex
+        default: '#cba6f7'
+    -
+        id: vx-bold-to
+        title: "Bold gradient end"
+        description: "Rosé Pine Love by default"
+        type: variable-color
+        format: hex
+        default: '#eb6f92'
+    -
+        id: vx-inline-code-color
+        title: "Inline code colour"
+        description: "Catppuccin Peach by default"
+        type: variable-color
+        format: hex
+        default: '#fab387'
+    -
+        id: vx-links
+        title: "Links"
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: vx-links-about
+        title: "Where these colours apply"
+        description: "Links to notes follow the accent colour. Heading, block, attachment, email and obsidian:// colours show in reading view, hover previews and canvas; the editor can't tell those links apart."
+        type: info-text
+    -
+        id: link-external-color
+        title: "Web links"
+        description: "Rosé Pine Foam by default"
+        type: variable-color
+        format: hex
+        default: '#9ccfd8'
+    -
+        id: link-unresolved-color
+        title: "Links to notes that don't exist yet"
+        description: "Catppuccin Maroon by default"
+        type: variable-color
+        format: hex
+        default: '#eba0ac'
+    -
+        id: vx-link-heading
+        title: "Links to headings"
+        description: "Catppuccin Blue by default"
+        type: variable-color
+        format: hex
+        default: '#89b4fa'
+    -
+        id: vx-link-block
+        title: "Links to blocks"
+        description: "Catppuccin Green by default"
+        type: variable-color
+        format: hex
+        default: '#a6e3a1'
+    -
+        id: vx-link-attachment
+        title: "Links to attachments (PDFs, images, audio, video)"
+        description: "Catppuccin Peach by default"
+        type: variable-color
+        format: hex
+        default: '#fab387'
+    -
+        id: vx-link-mailto
+        title: "Email links"
+        description: "Catppuccin Pink by default"
+        type: variable-color
+        format: hex
+        default: '#f5c2e7'
+    -
+        id: vx-link-uri
+        title: "obsidian:// links"
+        description: "Catppuccin Yellow by default"
+        type: variable-color
+        format: hex
+        default: '#f9e2af'
+    -
+        id: vx-link-bar-size
+        title: "Link underline thickness"
+        type: variable-number-slider
+        default: 3
+        min: 1
+        max: 6
+        step: 1
+        format: px
+    -
+        id: vx-no-link-bar
+        title: "Turn off the link underline and hover fill"
+        type: class-toggle
+    -
+        id: vx-decorations
+        title: "Decorations"
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: vx-hr-glyph
+        title: "Horizontal rule symbol"
+        description: "Shown in the middle of every --- divider"
+        type: variable-text
+        default: '☀'
+        quotes: true
+    -
+        id: vx-no-hr-glyph
+        title: "Hide the horizontal rule symbol"
+        type: class-toggle
+    -
+        id: vx-no-tab-cap
+        title: "Hide the accent line on the active tab"
+        type: class-toggle
+
+*/
 
 
 /* =====================================================================
@@ -269,6 +471,7 @@ body {
   --h5-weight: 600;
   --h6-weight: 600;
   --heading-formatting: var(--text-faint);
+  --vx-heading-glow: 0 0 0.6em color-mix(in oklch, currentColor 40%, transparent);
   --inline-title-margin-bottom: 0.6em;
 
   /* Heading underline gradients: level hue into a neighbouring hue, then
@@ -281,8 +484,10 @@ body {
   --vx-rule-h6: linear-gradient(to right, var(--h6-color), color-mix(in oklch, var(--ctp-pink) 55%, transparent) 20%, transparent 40%);
 
   /* Bold renders as a Mauve → Love gradient (see section 5). */
-  --bold-color: var(--ctp-mauve);
-  --vx-bold-gradient: linear-gradient(120deg, var(--ctp-mauve), var(--rp-love));
+  --vx-bold-from: var(--ctp-mauve);
+  --vx-bold-to: var(--rp-love);
+  --bold-color: var(--vx-bold-from);
+  --vx-bold-gradient: linear-gradient(120deg, var(--vx-bold-from), var(--vx-bold-to));
   --italic-color: color-mix(in oklch, var(--text-accent) 55%, var(--text-normal));
 
   /* Links: semibold, one palette hue per kind of link (see section 5).
@@ -378,6 +583,7 @@ body {
   --blockquote-color: var(--text-muted);
   --embed-border-start: 2px solid color-mix(in oklch, var(--interactive-accent) 50%, transparent);
   --hr-color: var(--color-base-25);
+  --vx-hr-glyph: "☀";
 
   /* Code: Catppuccin-style syntax on a near-black well */
   --code-background: var(--color-base-05);
@@ -442,7 +648,7 @@ body {
 
 .markdown-rendered :is(h1, h2, h3, h4, h5, h6),
 .cm-s-obsidian .cm-header:not(.cm-formatting) {
-  text-shadow: 0 0 0.6em color-mix(in oklch, currentColor 40%, transparent);
+  text-shadow: var(--vx-heading-glow);
 }
 
 /* The rule is a background strip rather than a border so it can sit
@@ -626,7 +832,7 @@ body {
 
 .markdown-rendered hr::after,
 .markdown-source-view.mod-cm6 .hr hr::after {
-  content: "☀";
+  content: var(--vx-hr-glyph);
   position: absolute;
   top: 0;
   left: 50%;
@@ -745,7 +951,44 @@ body:not(.is-phone) :is(.vertical-tab-nav-item, .horizontal-tab-nav-item).is-act
 
 
 /* =====================================================================
-   8. PLUGINS
+   8. TOGGLES
+   Classes the Style Settings plugin adds to <body> (see the @settings
+   block at the top of this file).
+   ===================================================================== */
+
+body.vx-no-heading-glow {
+  --vx-heading-glow: none;
+}
+
+body.vx-no-heading-rule {
+  --vx-rule-h1: none;
+  --vx-rule-h2: none;
+  --vx-rule-h3: none;
+  --vx-rule-h4: none;
+  --vx-rule-h5: none;
+  --vx-rule-h6: none;
+}
+
+body.vx-plain-bold :is(.markdown-rendered strong, .cm-s-obsidian .cm-strong) {
+  background-image: none;
+  -webkit-text-fill-color: currentColor;
+}
+
+body.vx-no-link-bar {
+  --vx-link-bar-strength: 0%;
+}
+
+body.vx-no-hr-glyph :is(.markdown-rendered, .markdown-source-view.mod-cm6 .hr) hr::after {
+  content: none;
+}
+
+body.vx-no-tab-cap .workspace .mod-root .workspace-tab-header.is-active .workspace-tab-header-inner::before {
+  content: none;
+}
+
+
+/* =====================================================================
+   9. PLUGINS
    ===================================================================== */
 
 /* Calendar */
