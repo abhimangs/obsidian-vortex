@@ -12,7 +12,8 @@
 - Every color comes from **Catppuccin Mocha** and **Rosé Pine**, with Catppuccin Mauve as the default accent.
 - Infinite accent color customization.
 - Neon glow and gradient underlines for headings.
-- Gradient bold text and smooth animations for links.
+- Gradient bold text, and semibold links with a palette color for every kind of link.
+- [Style Settings](https://github.com/community-archive/obsidian-style-settings) support for recoloring headings, bold, code and links.
 - Unique custom callouts with icons.
 
 > [!NOTE]
@@ -64,13 +65,23 @@ Each heading has a custom gradient underline for extra style.
 -->
 ## Link Styling and Animation
 
-Internal and external links are styled with distinct colors for easy differentiation. 
+Links are semibold, and every kind of link gets its own color from the palette:
 
-- **Internal Links**: Use the accent color (Catppuccin Mauve by default) and point to content within the vault.
-- **External Links**: Use Rosé Pine Foam and keep Obsidian's external-link icon.
+| Link | Color |
+| --- | --- |
+| Notes (`[[Note]]`) | Accent color (Catppuccin Mauve by default) |
+| Headings (`[[Note#Heading]]`) | Catppuccin Blue |
+| Blocks (`[[Note#^block]]`) | Catppuccin Green |
+| Attachments (PDFs, images, audio, video) | Catppuccin Peach |
+| Notes that don't exist yet | Catppuccin Maroon |
+| Web links | Rosé Pine Foam, with Obsidian's external-link icon |
+| Email (`mailto:`) | Catppuccin Pink |
+| `obsidian://` links | Catppuccin Yellow |
+
+Heading, block, attachment, email and `obsidian://` colors show in reading view, hover previews and canvas. The editor can't tell those links apart, so while editing, links are colored as notes, missing notes or web links.
 
 ### Hover Effect
-- A bottom border appears, rising to fill the background on hover, creating a smooth animation.
+- A colored bar sits under every link and rises to fill the word on hover, creating a smooth animation.
 
 This effect adds interactivity and enhances the visual appeal of your notes.
 
@@ -120,6 +131,18 @@ Below is a list of **custom callouts** with their respective icons. You can use 
 
 
 ![Vortex Callouts Image](assets/callouts.png)
+
+## ⚙️ Style Settings
+
+Vortex works with the [Style Settings](https://github.com/community-archive/obsidian-style-settings) plugin. Install it from **Settings → Community plugins**, then open **Settings → Style Settings → Vortex** to:
+
+- Recolor each heading level, or turn off the heading glow and underlines.
+- Switch bold text between the gradient and a solid color, and pick the gradient's colors.
+- Change the inline code color.
+- Recolor each kind of link, change the link underline thickness, or turn the underline off.
+- Change or hide the horizontal rule symbol, and hide the accent line on the active tab.
+
+The accent color itself stays in **Settings → Appearance → Accent color**.
 
 # 🌟 Transform Your Notes with Vortex  
 Vortex is a **lightweight theme** designed to make your notes visually stunning and highly customizable.  
@@ -175,3 +198,5 @@ This theme is licensed under the [MIT License](LICENSE). Feel free to use, modif
 <p align="center">
    Made with ❤️ by <a href="https://github.com/abhimangs">Abhiman Sundararajan</a> · <a href="https://abhiman.io">abhiman.io</a>
 </p>
+
+<p align="center"><sub>First released on 30 November 2024</sub></p>
