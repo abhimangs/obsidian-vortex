@@ -969,7 +969,10 @@ body.vx-no-heading-rule {
   --vx-rule-h6: none;
 }
 
-body.vx-plain-bold :is(.markdown-rendered strong, .cm-s-obsidian .cm-strong) {
+body.vx-plain-bold :is(
+  .markdown-rendered strong,
+  .cm-s-obsidian .cm-strong:not(.cm-inline-code, .cm-highlight, .cm-hashtag, .external-link)
+) {
   background-image: none;
   -webkit-text-fill-color: currentColor;
 }
