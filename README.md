@@ -1,7 +1,7 @@
 <h1 align="center">Vortex</h1>
 
 <div align="center">
-<strong>v2.0.1</strong> | Designed & Coded with ❤️ by <strong>Abhiman Sundararajan</strong>
+<strong>v2.1.0</strong> | Designed & Coded with ❤️ by <strong>Abhiman Sundararajan</strong>
 </div>
 <br>
 
