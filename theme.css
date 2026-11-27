@@ -680,6 +680,12 @@ li[data-task="/"] > p > input:checked::after {
   background-color: var(--interactive-accent);
 }
 
+/* File explorer: an open folder's arrow takes the accent; collapsed
+   folders keep the faint arrow. */
+.nav-folder-title .collapse-icon:not(.is-collapsed) {
+  --nav-collapse-icon-color: var(--text-accent);
+}
+
 /* Settings sidebar: match the file explorer's active item. */
 body:not(.is-phone) :is(.vertical-tab-nav-item, .horizontal-tab-nav-item).is-active {
   color: var(--nav-item-color-active);
