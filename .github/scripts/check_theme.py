@@ -183,7 +183,7 @@ for block in blocks:
                 fail(f"{where}: default must be one of the options")
         if stype in VARIABLE_TYPES and sid and f"--{sid}" not in used:
             fail(f"{where}: theme.css never reads var(--{sid}), so this setting does nothing")
-        if stype == "class-toggle" and sid and not re.search(r"\." + re.escape(sid) + r"\b", without_comments):
+        if stype == "class-toggle" and sid and not re.search(r"\." + re.escape(sid) + r"(?![\w-])", without_comments):
             fail(f"{where}: theme.css has no .{sid} rule, so this toggle does nothing")
 
 # 4. Undefined variables -------------------------------------------------------
