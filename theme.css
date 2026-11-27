@@ -1,12 +1,12 @@
 /* =====================================================================
  *
- *                         V O R T E X  ·  v2.0
- *      Pure OLED black, coloured with Catppuccin Mocha + Rosé Pine
+ *                         V O R T E X  ·  v2.1
+ *     Pure OLED black or clean white, coloured with Catppuccin + Rosé Pine
  *
  *   Readme:  https://github.com/abhimangs/Obsidian-Vortex
  *
- *   1. Palette      raw Catppuccin Mocha / Rosé Pine tokens
- *   2. Foundation   Obsidian colour variables (dark-only, OLED black)
+ *   1. Palette      Catppuccin + Rosé Pine tokens, one flavour per mode
+ *   2. Foundation   Obsidian colour variables, shared and per mode
  *   3. Components   Obsidian component variables
  *   4. Headings     per-level colour, glow and gradient rule
  *   5. Inline       bold gradient, links, inline code
@@ -16,8 +16,8 @@
  *   9. Plugins
  *
  *   Style Settings: the @settings block below lets the Style Settings
- *   community plugin tweak heading, bold, code and link colours and
- *   turn decorations off.
+ *   community plugin tweak heading, bold, code and link colours (with a
+ *   separate light and dark value for each) and turn decorations off.
  *
  * ===================================================================== */
 
@@ -30,7 +30,7 @@ settings:
     -
         id: vx-about
         title: "About"
-        description: "Vortex is pure OLED black, coloured with Catppuccin Mocha and Rosé Pine. The accent colour lives in **Settings → Appearance → Accent color**."
+        description: "Vortex is pure OLED black in dark mode and clean white in light mode. Dark mode is coloured with Catppuccin Mocha and Rosé Pine, light mode with Catppuccin Latte and Rosé Pine Dawn. Pick the mode, or Adapt to system, in **Settings → Appearance → Base color scheme**. The accent colour lives in **Settings → Appearance → Accent color**. Each colour below has its own light and dark value."
         type: info-text
         markdown: true
     -
@@ -43,44 +43,50 @@ settings:
         id: h1-color
         title: "Heading 1 colour"
         description: "Catppuccin Sapphire by default"
-        type: variable-color
+        type: variable-themed-color
         format: hex
-        default: '#74c7ec'
+        default-light: '#209fb5'
+        default-dark: '#74c7ec'
     -
         id: h2-color
         title: "Heading 2 colour"
         description: "Rosé Pine Gold by default"
-        type: variable-color
+        type: variable-themed-color
         format: hex
-        default: '#f6c177'
+        default-light: '#ea9d34'
+        default-dark: '#f6c177'
     -
         id: h3-color
         title: "Heading 3 colour"
         description: "Catppuccin Red by default"
-        type: variable-color
+        type: variable-themed-color
         format: hex
-        default: '#f38ba8'
+        default-light: '#d20f39'
+        default-dark: '#f38ba8'
     -
         id: h4-color
         title: "Heading 4 colour"
         description: "Rosé Pine Iris by default"
-        type: variable-color
+        type: variable-themed-color
         format: hex
-        default: '#c4a7e7'
+        default-light: '#907aa9'
+        default-dark: '#c4a7e7'
     -
         id: h5-color
         title: "Heading 5 colour"
         description: "Catppuccin Green by default"
-        type: variable-color
+        type: variable-themed-color
         format: hex
-        default: '#a6e3a1'
+        default-light: '#40a02b'
+        default-dark: '#a6e3a1'
     -
         id: h6-color
         title: "Heading 6 colour"
         description: "Rosé Pine Rose by default"
-        type: variable-color
+        type: variable-themed-color
         format: hex
-        default: '#ebbcba'
+        default-light: '#d7827e'
+        default-dark: '#ebbcba'
     -
         id: vx-no-heading-glow
         title: "Turn off the heading glow"
@@ -104,23 +110,26 @@ settings:
         id: vx-bold-from
         title: "Bold gradient start"
         description: "Catppuccin Mauve by default"
-        type: variable-color
+        type: variable-themed-color
         format: hex
-        default: '#cba6f7'
+        default-light: '#8839ef'
+        default-dark: '#cba6f7'
     -
         id: vx-bold-to
         title: "Bold gradient end"
         description: "Rosé Pine Love by default"
-        type: variable-color
+        type: variable-themed-color
         format: hex
-        default: '#eb6f92'
+        default-light: '#b4637a'
+        default-dark: '#eb6f92'
     -
         id: vx-inline-code-color
         title: "Inline code colour"
         description: "Catppuccin Peach by default"
-        type: variable-color
+        type: variable-themed-color
         format: hex
-        default: '#fab387'
+        default-light: '#fe640b'
+        default-dark: '#fab387'
     -
         id: vx-links
         title: "Links"
@@ -136,51 +145,58 @@ settings:
         id: link-external-color
         title: "Web links"
         description: "Rosé Pine Foam by default"
-        type: variable-color
+        type: variable-themed-color
         format: hex
-        default: '#9ccfd8'
+        default-light: '#56949f'
+        default-dark: '#9ccfd8'
     -
         id: link-unresolved-color
         title: "Links to notes that don't exist yet"
         description: "Catppuccin Maroon by default"
-        type: variable-color
+        type: variable-themed-color
         format: hex
-        default: '#eba0ac'
+        default-light: '#e64553'
+        default-dark: '#eba0ac'
     -
         id: vx-link-heading
         title: "Links to headings"
         description: "Catppuccin Blue by default"
-        type: variable-color
+        type: variable-themed-color
         format: hex
-        default: '#89b4fa'
+        default-light: '#1e66f5'
+        default-dark: '#89b4fa'
     -
         id: vx-link-block
         title: "Links to blocks"
         description: "Catppuccin Green by default"
-        type: variable-color
+        type: variable-themed-color
         format: hex
-        default: '#a6e3a1'
+        default-light: '#40a02b'
+        default-dark: '#a6e3a1'
     -
         id: vx-link-attachment
         title: "Links to attachments (PDFs, images, audio, video)"
         description: "Catppuccin Peach by default"
-        type: variable-color
+        type: variable-themed-color
         format: hex
-        default: '#fab387'
+        default-light: '#fe640b'
+        default-dark: '#fab387'
     -
         id: vx-link-mailto
         title: "Email links"
         description: "Catppuccin Pink by default"
-        type: variable-color
+        type: variable-themed-color
         format: hex
-        default: '#f5c2e7'
+        default-light: '#ea76cb'
+        default-dark: '#f5c2e7'
     -
         id: vx-link-uri
         title: "obsidian:// links"
         description: "Catppuccin Yellow by default"
-        type: variable-color
+        type: variable-themed-color
         format: hex
-        default: '#f9e2af'
+        default-light: '#df8e1d'
+        default-dark: '#f9e2af'
     -
         id: vx-link-bar-size
         title: "Link underline thickness"
@@ -221,7 +237,10 @@ settings:
 
 /* =====================================================================
    1. PALETTE
-   Every colour in this file comes from one of these two palettes.
+   Every colour in this file comes from Catppuccin or Rosé Pine. The token
+   names don't name a flavour: dark mode uses Catppuccin Mocha and Rosé
+   Pine, and light mode swaps in Catppuccin Latte and Rosé Pine Dawn under
+   the same names, so every rule below picks up the right one by itself.
    ===================================================================== */
 
 body {
@@ -253,7 +272,7 @@ body {
   --ctp-mantle: #181825;
   --ctp-crust: #11111b;
 
-  /* Rosé Pine */
+  /* Rosé Pine (main) */
   --rp-base: #191724;
   --rp-surface: #1f1d2e;
   --rp-overlay: #26233a;
@@ -271,18 +290,67 @@ body {
   --rp-highlight-high: #524f67;
 }
 
+.theme-light {
+  /* Catppuccin Latte */
+  --ctp-rosewater: #dc8a78;
+  --ctp-flamingo: #dd7878;
+  --ctp-pink: #ea76cb;
+  --ctp-mauve: #8839ef;
+  --ctp-red: #d20f39;
+  --ctp-maroon: #e64553;
+  --ctp-peach: #fe640b;
+  --ctp-yellow: #df8e1d;
+  --ctp-green: #40a02b;
+  --ctp-teal: #179299;
+  --ctp-sky: #04a5e5;
+  --ctp-sapphire: #209fb5;
+  --ctp-blue: #1e66f5;
+  --ctp-lavender: #7287fd;
+  --ctp-text: #4c4f69;
+  --ctp-subtext1: #5c5f77;
+  --ctp-subtext0: #6c6f85;
+  --ctp-overlay2: #7c7f93;
+  --ctp-overlay1: #8c8fa1;
+  --ctp-overlay0: #9ca0b0;
+  --ctp-surface2: #acb0be;
+  --ctp-surface1: #bcc0cc;
+  --ctp-surface0: #ccd0da;
+  --ctp-base: #eff1f5;
+  --ctp-mantle: #e6e9ef;
+  --ctp-crust: #dce0e8;
+
+  /* Rosé Pine Dawn */
+  --rp-base: #faf4ed;
+  --rp-surface: #fffaf3;
+  --rp-overlay: #f2e9e1;
+  --rp-muted: #9893a5;
+  --rp-subtle: #797593;
+  --rp-text: #575279;
+  --rp-love: #b4637a;
+  --rp-gold: #ea9d34;
+  --rp-rose: #d7827e;
+  --rp-pine: #286983;
+  --rp-foam: #56949f;
+  --rp-iris: #907aa9;
+  --rp-highlight-low: #f4ede8;
+  --rp-highlight-med: #dfdad9;
+  --rp-highlight-high: #cecacd;
+}
+
 
 /* =====================================================================
    2. FOUNDATION
-   Vortex is dark-only: light mode gets the same OLED palette. The
-   .is-mobile selectors match the specificity of Obsidian's own mobile
-   overrides so phones and tablets stay on pure black too.
+   Obsidian sets its colour variables on .theme-dark / .theme-light, which
+   beat a body rule, so they're all set here. Obsidian puts one of those
+   classes on <body> from Settings → Appearance → Base color scheme, and
+   "Adapt to system" switches it with the OS, so nothing here needs a
+   media query. The .is-mobile selectors match the specificity of
+   Obsidian's own mobile overrides.
    ===================================================================== */
 
+/* Dark: pure OLED black, Catppuccin Mocha + Rosé Pine. */
 .theme-dark,
-.theme-light,
-.is-mobile.theme-dark,
-.is-mobile.theme-light {
+.is-mobile.theme-dark {
   color-scheme: dark;
 
   /* Default accent = Catppuccin Mauve (#cba6f7). Settings → Appearance →
@@ -314,16 +382,6 @@ body {
   --color-base-70: var(--ctp-subtext1);
   --color-base-100: var(--rp-text);
 
-  /* Obsidian's semantic colours, remapped. These feed callouts, graph,
-     canvas cards, highlights, Mermaid, sync avatars and syntax colours. */
-  --color-red: var(--rp-love);
-  --color-orange: var(--ctp-peach);
-  --color-yellow: var(--rp-gold);
-  --color-green: var(--ctp-green);
-  --color-cyan: var(--rp-foam);
-  --color-blue: var(--ctp-blue);
-  --color-purple: var(--ctp-mauve);
-  --color-pink: var(--ctp-pink);
   --color-red-rgb: 235, 111, 146;
   --color-orange-rgb: 250, 179, 135;
   --color-yellow-rgb: 246, 193, 119;
@@ -333,13 +391,89 @@ body {
   --color-purple-rgb: 203, 166, 247;
   --color-pink-rgb: 245, 194, 231;
 
-  /* Accent ladder. Obsidian's defaults brighten by multiplying lightness,
-     which pushes a pastel accent to white; mix toward Rosé Pine Text instead. */
-  --color-accent-1: color-mix(in oklab, var(--color-accent) 80%, var(--color-base-100));
-  --color-accent-2: color-mix(in oklab, var(--color-accent) 60%, var(--color-base-100));
   /* Text uses the accent's hue but never drops below a readable lightness,
      so a dark picked accent (e.g. Rosé Pine Pine) still reads on black. */
   --text-accent: oklch(from var(--color-accent) max(l, 0.72) c h);
+
+  --background-modifier-cover: rgba(0, 0, 0, 0.75);
+  --background-modifier-box-shadow: rgba(0, 0, 0, 0.6);
+  --shadow-s: 0 1px 2px rgba(0, 0, 0, 0.5), 0 6px 16px rgba(0, 0, 0, 0.6);
+  --shadow-l: 0 2px 8px rgba(0, 0, 0, 0.5), 0 24px 64px rgba(0, 0, 0, 0.7);
+}
+
+/* Light: clean white, Catppuccin Latte + Rosé Pine Dawn. */
+.theme-light,
+.is-mobile.theme-light {
+  color-scheme: light;
+
+  /* Default accent = Catppuccin Latte Mauve (#8839ef). */
+  --accent-h: 266;
+  --accent-s: 85%;
+  --accent-l: 58%;
+
+  --mono-0: white;
+  --mono-100: black;
+  --mono-rgb-0: 255, 255, 255;
+  --mono-rgb-100: 0, 0, 0;
+  --highlight-mix-blend-mode: darken;
+
+  /* Neutral ramp, mirrored: white at the bottom, Latte greys for the
+     hairlines, Rosé Pine Dawn Text on top. 05/10 are the only
+     off-whites, used for code blocks and floating surfaces. */
+  --color-base-00: #ffffff;
+  --color-base-05: color-mix(in srgb, var(--ctp-base) 50%, #ffffff);
+  --color-base-10: var(--ctp-base);
+  --color-base-20: var(--ctp-mantle);
+  --color-base-25: var(--ctp-crust);
+  --color-base-30: var(--ctp-surface0);
+  --color-base-35: var(--ctp-surface1);
+  --color-base-40: var(--ctp-surface2);
+  --color-base-50: var(--rp-muted);
+  --color-base-60: var(--rp-subtle);
+  --color-base-70: var(--ctp-subtext0);
+  --color-base-100: var(--rp-text);
+
+  --color-red-rgb: 180, 99, 122;
+  --color-orange-rgb: 254, 100, 11;
+  --color-yellow-rgb: 234, 157, 52;
+  --color-green-rgb: 64, 160, 43;
+  --color-cyan-rgb: 86, 148, 159;
+  --color-blue-rgb: 30, 102, 245;
+  --color-purple-rgb: 136, 57, 239;
+  --color-pink-rgb: 234, 118, 203;
+
+  /* The mirror of dark mode's floor: a pastel picked accent (e.g. Mocha
+     Mauve) is deepened until it reads on white. */
+  --text-accent: oklch(from var(--color-accent) min(l, 0.56) c h);
+
+  --background-modifier-cover: color-mix(in oklch, var(--ctp-crust) 55%, transparent);
+  --background-modifier-box-shadow: rgba(0, 0, 0, 0.1);
+  --shadow-s: 0 1px 2px rgba(0, 0, 0, 0.06), 0 6px 16px rgba(0, 0, 0, 0.08);
+  --shadow-l: 0 2px 8px rgba(0, 0, 0, 0.08), 0 24px 64px rgba(0, 0, 0, 0.16);
+}
+
+/* Both modes: everything else derives from the ramp and the palette. */
+.theme-dark,
+.theme-light,
+.is-mobile.theme-dark,
+.is-mobile.theme-light {
+  /* Obsidian's semantic colours, remapped. These feed callouts, graph,
+     canvas cards, highlights, Mermaid, sync avatars and syntax colours.
+     The -rgb triplets can't be derived, so they live in the mode blocks. */
+  --color-red: var(--rp-love);
+  --color-orange: var(--ctp-peach);
+  --color-yellow: var(--rp-gold);
+  --color-green: var(--ctp-green);
+  --color-cyan: var(--rp-foam);
+  --color-blue: var(--ctp-blue);
+  --color-purple: var(--ctp-mauve);
+  --color-pink: var(--ctp-pink);
+
+  /* Accent ladder. Obsidian's defaults brighten by multiplying lightness,
+     which pushes a pastel accent to white; mix toward the text colour
+     instead (lighter in dark mode, deeper in light mode). */
+  --color-accent-1: color-mix(in oklab, var(--color-accent) 80%, var(--color-base-100));
+  --color-accent-2: color-mix(in oklab, var(--color-accent) 60%, var(--color-base-100));
   --text-accent-hover: color-mix(in oklab, var(--text-accent) 80%, var(--color-base-100));
   --interactive-accent: var(--color-accent);
   --interactive-accent-hover: var(--color-accent-1);
@@ -356,7 +490,8 @@ body {
   --text-warning: var(--color-orange);
   --text-success: var(--color-green);
 
-  /* Surfaces: one black plane, separated by hairlines rather than shades. */
+  /* Surfaces: one plane (black or white), separated by hairlines rather
+     than shades. */
   --background-primary: var(--color-base-00);
   --background-primary-alt: var(--color-base-05);
   --background-secondary: var(--color-base-00);
@@ -369,8 +504,6 @@ body {
   --background-modifier-form-field: var(--color-base-05);
   --background-modifier-form-field-hover: var(--color-base-05);
   --background-modifier-message: var(--color-base-10);
-  --background-modifier-cover: rgba(0, 0, 0, 0.75);
-  --background-modifier-box-shadow: rgba(0, 0, 0, 0.6);
   --background-modifier-error: var(--color-red);
   --background-modifier-error-hover: var(--color-red);
   --background-modifier-warning: var(--color-orange);
@@ -390,12 +523,10 @@ body {
   --input-shadow-hover: inset 0 0 0 1px var(--background-modifier-border-hover);
   --blur-background: color-mix(in srgb, var(--color-base-05) 88%, transparent);
   --raised-mask-background: transparent;
-  --shadow-s: 0 1px 2px rgba(0, 0, 0, 0.5), 0 6px 16px rgba(0, 0, 0, 0.6);
-  --shadow-l: 0 2px 8px rgba(0, 0, 0, 0.5), 0 24px 64px rgba(0, 0, 0, 0.7);
   --pdf-shadow: 0 0 0 1px var(--background-modifier-border);
   --pdf-thumbnail-shadow: 0 0 0 1px var(--background-modifier-border);
 
-  /* Workspace chrome sits on the same black as the page. */
+  /* Workspace chrome sits on the same plane as the page. */
   --titlebar-background: var(--background-primary);
   --titlebar-background-focused: var(--background-primary);
   --titlebar-border-color: var(--background-modifier-border);
@@ -410,7 +541,7 @@ body {
   --search-result-background: var(--background-primary);
   --canvas-background: var(--background-primary);
 
-  /* Floating surfaces lift one near-black step and carry a border. */
+  /* Floating surfaces lift one step off the plane and carry a border. */
   --modal-background: var(--background-primary);
   --modal-border-color: var(--color-base-25);
   --settings-background: var(--background-primary);
@@ -637,6 +768,16 @@ body {
   --graph-node-attachment: var(--rp-gold);
   --graph-text: var(--text-normal);
   --canvas-dot-pattern: var(--color-base-25);
+}
+
+
+/* Light mode: a softer heading glow (a full-strength halo smudges on
+   white), and white slider and toggle thumbs rather than text-coloured. */
+.theme-light {
+  --vx-heading-glow: 0 0 0.5em color-mix(in oklch, currentColor 25%, transparent);
+  --slider-thumb-background: var(--color-base-00);
+  --slider-thumb-background-hover: var(--color-base-00);
+  --toggle-thumb-color: var(--color-base-00);
 }
 
 
