@@ -335,12 +335,12 @@ body {
 
   /* Accent ladder. Obsidian's defaults brighten by multiplying lightness,
      which pushes a pastel accent to white; mix toward Rosé Pine Text instead. */
-  --color-accent-1: color-mix(in oklch, var(--color-accent) 80%, var(--color-base-100));
-  --color-accent-2: color-mix(in oklch, var(--color-accent) 60%, var(--color-base-100));
+  --color-accent-1: color-mix(in oklab, var(--color-accent) 80%, var(--color-base-100));
+  --color-accent-2: color-mix(in oklab, var(--color-accent) 60%, var(--color-base-100));
   /* Text uses the accent's hue but never drops below a readable lightness,
      so a dark picked accent (e.g. Rosé Pine Pine) still reads on black. */
   --text-accent: oklch(from var(--color-accent) max(l, 0.72) c h);
-  --text-accent-hover: color-mix(in oklch, var(--text-accent) 80%, var(--color-base-100));
+  --text-accent-hover: color-mix(in oklab, var(--text-accent) 80%, var(--color-base-100));
   --interactive-accent: var(--color-accent);
   --interactive-accent-hover: var(--color-accent-1);
   /* Black on light accents, white on dark ones, whatever the user picks. */
@@ -488,7 +488,7 @@ body {
   --vx-bold-to: var(--rp-love);
   --bold-color: var(--vx-bold-from);
   --vx-bold-gradient: linear-gradient(120deg, var(--vx-bold-from), var(--vx-bold-to));
-  --italic-color: color-mix(in oklch, var(--text-accent) 55%, var(--text-normal));
+  --italic-color: color-mix(in oklab, var(--text-accent) 55%, var(--text-normal));
 
   /* Links: semibold, one palette hue per kind of link (see section 5).
      Internal links follow the accent; external links are Rosé Pine Foam. */
@@ -498,7 +498,7 @@ body {
   --link-decoration: none;
   --link-decoration-hover: none;
   --link-external-color: var(--rp-foam);
-  --link-external-color-hover: color-mix(in oklch, var(--link-external-color) 75%, var(--text-normal));
+  --link-external-color-hover: color-mix(in oklab, var(--link-external-color) 75%, var(--text-normal));
   --link-external-decoration: none;
   --link-external-decoration-hover: none;
   --link-unresolved-color: var(--ctp-maroon);
@@ -630,7 +630,7 @@ body {
 
   /* Graph and canvas */
   --graph-line: var(--color-base-30);
-  --graph-node: color-mix(in oklch, var(--text-accent) 55%, var(--text-muted));
+  --graph-node: color-mix(in oklab, var(--text-accent) 55%, var(--text-muted));
   --graph-node-unresolved: var(--text-faint);
   --graph-node-focused: var(--text-accent);
   --graph-node-tag: var(--rp-foam);
@@ -718,13 +718,13 @@ body {
    bar are derived from whichever colour applies. */
 .markdown-rendered .internal-link,
 .markdown-source-view.mod-cm6 .cm-hmd-internal-link .cm-underline {
-  --link-color-hover: color-mix(in oklch, var(--link-color) 75%, var(--text-normal));
+  --link-color-hover: color-mix(in oklab, var(--link-color) 75%, var(--text-normal));
   --vx-link-bar: color-mix(in oklch, var(--link-color) var(--vx-link-bar-strength), transparent);
 }
 
 .markdown-rendered .external-link,
 .markdown-source-view.mod-cm6 :is(.cm-link, .cm-url) .cm-underline {
-  --link-external-color-hover: color-mix(in oklch, var(--link-external-color) 75%, var(--text-normal));
+  --link-external-color-hover: color-mix(in oklab, var(--link-external-color) 75%, var(--text-normal));
   --vx-link-bar: color-mix(in oklch, var(--link-external-color) var(--vx-link-bar-strength), transparent);
 }
 
