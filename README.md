@@ -8,8 +8,10 @@
 ![Vortex Cover Image](assets/cover-hd.png)
 
 ## ✨ Features
-- Pure OLED black: the editor, sidebars, tabs, ribbon and title bar all sit on true `#000`, separated by hairlines instead of grey panels.
-- Every color comes from **Catppuccin Mocha** and **Rosé Pine**, with Catppuccin Mauve as the default accent.
+- Pure OLED black in dark mode: the editor, sidebars, tabs, ribbon and title bar all sit on true `#000`, separated by hairlines instead of grey panels.
+- A matching light mode on clean white, with the same hairlines, glow and gradients.
+- Follows **Settings → Appearance → Base color scheme**, including **Adapt to system**, so Vortex switches between light and dark along with your computer.
+- Every color comes from **Catppuccin** and **Rosé Pine**: Mocha and Rosé Pine in dark mode, Latte and Rosé Pine Dawn in light mode, with Catppuccin Mauve as the default accent.
 - Infinite accent color customization.
 - Neon glow and gradient underlines for headings.
 - Gradient bold text, and semibold links with a palette color for every kind of link.
@@ -17,7 +19,7 @@
 - Unique custom callouts with icons.
 
 > [!NOTE]
-> Vortex is dark-only: switching Obsidian to light mode keeps the same OLED palette. It uses modern CSS (relative colors and `color-mix()`), so if colors look off, update to the latest Obsidian installer from [obsidian.md](https://obsidian.md/download).
+> Vortex has a dark and a light mode. Choose one, or **Adapt to system**, in **Settings → Appearance → Base color scheme**. It uses modern CSS (relative colors and `color-mix()`), so if colors look off, update to the latest Obsidian installer from [obsidian.md](https://obsidian.md/download).
 <!-- 
 ╔═══════════════════════════╗
 ║         COLOURS           ║
@@ -78,6 +80,8 @@ Links are semibold, and every kind of link gets its own color from the palette:
 | Email (`mailto:`) | Catppuccin Pink |
 | `obsidian://` links | Catppuccin Yellow |
 
+Each color uses its Mocha or Rosé Pine shade in dark mode and its Latte or Rosé Pine Dawn shade in light mode.
+
 Heading, block, attachment, email and `obsidian://` colors show in reading view, hover previews and canvas. The editor can't tell those links apart, so while editing, links are colored as notes, missing notes or web links.
 
 ### Hover Effect
@@ -134,7 +138,7 @@ Below is a list of **custom callouts** with their respective icons. You can use 
 
 ## ⚙️ Style Settings
 
-Vortex works with the [Style Settings](https://github.com/community-archive/obsidian-style-settings) plugin. Install it from **Settings → Community plugins**, then open **Settings → Style Settings → Vortex** to:
+Vortex works with the [Style Settings](https://github.com/community-archive/obsidian-style-settings) plugin. Install it from **Settings → Community plugins**, then open **Settings → Style Settings → Vortex** to change the following. Every color has a separate light and dark value.
 
 - Recolor each heading level, or turn off the heading glow and underlines.
 - Switch bold text between the gradient and a solid color, and pick the gradient's colors.
